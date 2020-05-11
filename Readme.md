@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Роман Вахитов](https://up.htmlacademy.ru/htmlcss/28/user/1389537).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
