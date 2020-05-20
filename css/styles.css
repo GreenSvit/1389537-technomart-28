@@ -52,10 +52,16 @@
 	align-self: flex-start;
 	color: var(--white);
 	font-size: 18px;
-	padding-left: 20px;
+	padding-left: 30px;
+	background: url('../img/icons/icon-search-calm.svg') no-repeat;
+	background-position: 3%;
 }
 
-.header-top a:not(:first-child) {
+.search:hover {
+	background-image: url('../img/icons/icon-search.svg');
+}
+
+.header-top a:not(.logo-technomart) {
 	text-decoration: none;
 	color: var(--white);
 	position: relative;
@@ -66,28 +72,36 @@
 	font-size: 18px;
 }
 
-.header-bookmarks::before {
-	content: '';
-	position: absolute;
-	background: url('../img/icons/icon-bookmark.svg') no-repeat;
-	background-size: cover;
-	height: 16px;
-	width: 14px;
-	top: 12px;
-	left: 10px;
-}
-
+.header-bookmarks::before,
 .header-cart::before {
 	content: '';
 	position: absolute;
-	background: url('../img/icons/icon-cart.svg') no-repeat;
 	background-size: cover;
-	height: 15px;
-	width: 15px;
 	top: 12px;
-	left: 0;
+	left: 10px;
+	opacity: 0.3;
 }
 
+.header-bookmarks::before {
+	background: url('../img/icons/icon-bookmark.svg') no-repeat;
+	height: 16px;
+	width: 14px;
+}
+
+.header-cart::before {
+	background: url('../img/icons/icon-cart.svg') no-repeat;
+	height: 15px;
+	width: 15px;
+}
+
+.header-top a:hover.header-bookmarks::before,
+.header-top a:hover.header-cart::before {
+	opacity: 1;
+}
+
+.header-top a:hover.header-order {
+	background-color: var(--success);
+}
 .header-order {
 	width: 150px;
 	background-color: var(--basic-green);
