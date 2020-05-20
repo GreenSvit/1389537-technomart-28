@@ -1,0 +1,94 @@
+:root {
+	--basic-red: #ee3643;
+	--basic-green: #63a63e;
+	--basic-grey: #3d546f;
+	--basic-greylight: #c5c5c5;
+	--basic-background: #f1f5f7;
+	--white: #ffffff;
+
+	--special-yellow: #ffbf47;
+	--special-blue: #3bbce3;
+	--special-lilac: #dc91d8;
+	--special-greenlight: #8ed78f;
+	--special-yellowlight: #ffd180;
+
+	--success: #5fbb2d;
+	--warning: #ffbf47;
+	--error: #ba2732;
+
+	--lightgrey: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), #eaeaea;
+}
+
+.container {
+	width: 100%;
+	max-width: 940px;
+	margin: 0 auto;
+}
+.header-line {
+	width: 100%;
+	background-color: #293449;
+	height: 42px;
+}
+
+.header-top {
+	display: flex;
+	align-items: flex-start;
+}
+
+.logo-technomart {
+	padding: 12px 55px;
+	background-color: var(--basic-red);
+	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+	text-decoration: none;
+}
+
+.search {
+	position: relative;
+	line-height: 42px;
+	width: 271px;
+	height: 42px;
+	border: none;
+	background: none;
+	align-self: flex-start;
+	color: var(--white);
+	font-size: 18px;
+	padding-left: 20px;
+}
+
+.header-top a:not(:first-child) {
+	text-decoration: none;
+	color: var(--white);
+	position: relative;
+	width: 150px;
+	height: 42px;
+	text-align: center;
+	line-height: 42px;
+	font-size: 18px;
+}
+
+.header-bookmarks::before {
+	content: '';
+	position: absolute;
+	background: url('../img/icons/icon-bookmark.svg') no-repeat;
+	background-size: cover;
+	height: 16px;
+	width: 14px;
+	top: 12px;
+	left: 10px;
+}
+
+.header-cart::before {
+	content: '';
+	position: absolute;
+	background: url('../img/icons/icon-cart.svg') no-repeat;
+	background-size: cover;
+	height: 15px;
+	width: 15px;
+	top: 12px;
+	left: 0;
+}
+
+.header-order {
+	width: 150px;
+	background-color: var(--basic-green);
+}
