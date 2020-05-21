@@ -24,6 +24,10 @@
 	max-width: 940px;
 	margin: 0 auto;
 }
+
+.header {
+	background-color: #f3f7f8;
+}
 .header-line {
 	width: 100%;
 	background-color: #293449;
@@ -105,4 +109,122 @@
 .header-order {
 	width: 150px;
 	background-color: var(--basic-green);
+}
+
+.header-middle {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 46px;
+	align-items: flex-start;
+}
+
+.header-desc {
+	font-size: 16px;
+	line-height: 23px;
+	color: var(--basic-red);
+	width: 200px;
+	font-style: italic;
+	margin: 0;
+}
+
+.header-phone {
+	position: relative;
+	margin: 0 auto;
+	display: block;
+	text-decoration: none;
+	width: 270px;
+	height: 45px;
+	box-sizing: border-box;
+	border: 3px solid var(--white);
+	padding: 8px 35px 8px 74px;
+	color: var(--basic-red);
+	font-size: 19px;
+	font-weight: bold;
+}
+
+.header-phone::before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	height: 19px;
+	width: 19px;
+	background: url('../img/icons/icon-phone.svg') no-repeat;
+	background-size: cover;
+}
+
+.header-address {
+	font-size: 14px;
+	text-align: center;
+	margin-top: 5px;
+	font-style: normal;
+} 
+
+.header-log-buttons  a {
+	display: inline-block;
+	text-decoration: none;
+	height: 45px;
+	line-height: 45px;
+	background-color: var(--white);
+	color: #000;
+}
+
+.header-log-buttons  a:hover {
+	color: var(--basic-red);
+}
+
+.header-enter {
+	padding: 0 27px 0 45px;
+	position: relative;
+}
+
+.header-registration {
+	margin-left: 10px;
+	padding: 0 24px;
+}
+
+.header-enter::before {
+	content: '';
+	position: absolute;
+	top: 13px;
+	left: 15px;
+	height: 17px;
+	width: 20px;
+	background: url('../img/icons/icon-login.svg') no-repeat;
+	background-size: cover;
+}
+
+.header-enter:hover.header-enter::before {
+	background: url('../img/icons/icon-login-hover.svg') no-repeat;
+}
+
+.header-bottom {
+	margin-top: 40px;
+}
+
+.header-menu-list {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.header-menu-item {
+	flex-grow: 1;
+}
+
+.header-menu-item a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	color: var(--white);
+	background-color: #32425c;
+	box-shadow: inset 0px -5px 0px #293449;
+	height: 60px;
+	font-size: 18px;
+	padding-top: 16px;
+	box-sizing: border-box;
+}
+
+.header-menu-item a:hover {
+	background-color: #293449;;
 }
