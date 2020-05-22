@@ -1,3 +1,6 @@
+/* @import 'normalize.css'; */
+
+
 :root {
 	--basic-red: #ee3643;
 	--basic-green: #63a63e;
@@ -17,6 +20,11 @@
 	--error: #ba2732;
 
 	--lightgrey: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), #eaeaea;
+}
+
+body {
+	font-family: 'Cuprum', sans-serif;
+	font-size: 18px;
 }
 
 .container {
@@ -40,10 +48,14 @@
 }
 
 .logo-technomart {
-	padding: 12px 55px;
+	padding: 12px 56px;
 	background-color: var(--basic-red);
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 	text-decoration: none;
+}
+
+.logo-technomart:active {
+	background-color: var(--error);
 }
 
 .search {
@@ -56,24 +68,62 @@
 	align-self: flex-start;
 	color: var(--white);
 	font-size: 18px;
-	padding-left: 30px;
+	padding-left: 42px;
 	background: url('../img/icons/icon-search-calm.svg') no-repeat;
-	background-position: 3%;
+	background-position: 7% 48%;
+}
+
+.search::placeholder {
+	font-family: inherit;
+	color: var(--white);
 }
 
 .search:hover {
 	background-image: url('../img/icons/icon-search.svg');
 }
 
-.header-top a:not(.logo-technomart) {
+.search:focus {
+	background-color: var(--white);
+	color: #000000;
+	background-image: url('../img/icons/icon-search-focus.svg');
+}
+
+.search:focus::placeholder {
+	color: #000000;
+}
+
+
+.header-top-links {
+	height: 100%;
+	margin-left: auto;
+	display: flex;
+	width: 450px;
+	justify-content: space-between;
+}
+.header-top-link {
+	display: inline-block;
+	box-sizing: border-box;
 	text-decoration: none;
 	color: var(--white);
 	position: relative;
 	width: 150px;
-	height: 42px;
-	text-align: center;
+	height: 100%;
 	line-height: 42px;
 	font-size: 18px;
+	flex-grow: 1;
+}
+
+.header-bookmarks {
+	padding-left:43px;
+}
+
+.header-cart {
+	padding-left: 49px;
+}
+
+.header-order {
+	background-color: var(--basic-green);
+	text-align: center;
 }
 
 .header-bookmarks::before,
@@ -81,50 +131,72 @@
 	content: '';
 	position: absolute;
 	background-size: cover;
-	top: 12px;
-	left: 10px;
 	opacity: 0.3;
+	top: 13px;
 }
 
 .header-bookmarks::before {
 	background: url('../img/icons/icon-bookmark.svg') no-repeat;
 	height: 16px;
 	width: 14px;
+	left: 20px;
+	
 }
 
 .header-cart::before {
 	background: url('../img/icons/icon-cart.svg') no-repeat;
 	height: 15px;
 	width: 15px;
+	left: 26px;
 }
 
-.header-top a:hover.header-bookmarks::before,
-.header-top a:hover.header-cart::before {
+.header-bookmarks:hover::before,
+.header-cart:hover::before {
 	opacity: 1;
 }
 
-.header-top a:hover.header-order {
+.header-order:hover {
 	background-color: var(--success);
 }
-.header-order {
-	width: 150px;
+
+.header-bookmarks:active,
+.header-cart:active {
+	background-color: #161d29;
+}
+
+.header-bookmarks:active::before,
+.header-cart:active::before {
+	opacity: 0.3;
+}
+
+.header-order:active {
 	background-color: var(--basic-green);
 }
+
+.header-top-link:active {
+	color: rgba(255, 255, 255, 0.5);
+}
+
 
 .header-middle {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 46px;
+	margin-top: 43px;
 	align-items: flex-start;
 }
 
 .header-desc {
 	font-size: 16px;
-	line-height: 23px;
+	line-height: 24px;
 	color: var(--basic-red);
 	width: 200px;
 	font-style: italic;
-	margin: 0;
+	margin: 0 0 0 30px;
+}
+
+.header-contacts {
+	margin-top: 3px;
+	padding-left: 17px;
 }
 
 .header-phone {
@@ -136,9 +208,11 @@
 	height: 45px;
 	box-sizing: border-box;
 	border: 3px solid var(--white);
-	padding: 8px 35px 8px 74px;
+	/* padding: 7px 35px 8px 74px; */
+	padding-top: 7px;
+	padding-left: 73px;
 	color: var(--basic-red);
-	font-size: 19px;
+	font-size: 21px;
 	font-weight: bold;
 }
 
@@ -146,7 +220,7 @@
 	content: '';
 	position: absolute;
 	top: 10px;
-	left: 30px;
+	left: 38px;
 	height: 19px;
 	width: 19px;
 	background: url('../img/icons/icon-phone.svg') no-repeat;
@@ -156,9 +230,14 @@
 .header-address {
 	font-size: 14px;
 	text-align: center;
-	margin-top: 5px;
+	margin-top: 7px;
 	font-style: normal;
+	padding: 0 5px;
 } 
+
+.header-log-buttons {
+	margin-top: 3px;
+}
 
 .header-log-buttons  a {
 	display: inline-block;
@@ -167,39 +246,56 @@
 	line-height: 45px;
 	background-color: var(--white);
 	color: #000;
+	font-size: 21px;
+	box-sizing: border-box;
 }
 
-.header-log-buttons  a:hover {
+.header-enter:hover,
+.header-registration:hover {
 	color: var(--basic-red);
 }
+
+
 
 .header-enter {
 	padding: 0 27px 0 45px;
 	position: relative;
+	width: 121px;
 }
 
 .header-registration {
-	margin-left: 10px;
+	margin-left: 5px;
 	padding: 0 24px;
+	width: 150px;
+	
+	
 }
 
 .header-enter::before {
 	content: '';
 	position: absolute;
-	top: 13px;
-	left: 15px;
+	top: 14px;
+	left: 18px;
 	height: 17px;
 	width: 20px;
 	background: url('../img/icons/icon-login.svg') no-repeat;
 	background-size: cover;
 }
 
-.header-enter:hover.header-enter::before {
+.header-enter:hover::before {
 	background: url('../img/icons/icon-login-hover.svg') no-repeat;
 }
 
+.header-enter:active,
+.header-registration:active {
+	color: var(--basic-greylight)
+}
+.header-enter:active::before {
+	background: url('../img/icons/icon-login.svg') no-repeat;
+}
+
 .header-bottom {
-	margin-top: 40px;
+	margin-top: 43px;
 }
 
 .header-menu-list {
@@ -221,10 +317,15 @@
 	box-shadow: inset 0px -5px 0px #293449;
 	height: 60px;
 	font-size: 18px;
-	padding-top: 16px;
+	padding-top: 19px;
 	box-sizing: border-box;
 }
 
 .header-menu-item a:hover {
-	background-color: #293449;;
+	background-color: #293449;
+}
+
+.header-menu-item a:active {
+	background-color: #1D2739;
+	color: rgba(255, 255, 255, 0.5) ;
 }
