@@ -202,7 +202,29 @@
           заехав в наш офис:
         </p>
         <img src="img/design/Object.png" alt="Карта офиса по адресу улица Большая Конюшенная, 19" width="300" height="158">
-        <a href="#">Заблудились? Напишите нам!</a>
+        <!-- Всплывающая карта -->
+        <div class="big-map">
+          <img src="img/design/map-popup.png" alt="Карта офиса по адресу улица Большая Конюшенная, 19">
+        </div>
+        <a href="#contact-form">Заблудились? Напишите нам!</a>
+        <!-- Всплывающая форма -->
+        <div class="contact-form" id="contact-form">
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <p>
+              <label for="form-name">Ваше имя:</label>
+              <input type="text" placeholder="Имя Фамилия" name="name" id="form-name">
+            </p>
+            <p>
+              <label for="form-email">Ваш e-mail:</label>
+              <input type="email" placeholder="email@example.com" name="email" id="form-email">
+            </p>
+            <p>
+              <label for="form-question">Текст письма:</label>
+              <input type="text" placeholder="В свободной форме" name="question" id="form-question">
+            </p>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
