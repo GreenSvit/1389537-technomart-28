@@ -1,6 +1,5 @@
 /* @import 'normalize.css'; */
 
-
 :root {
 	--basic-red: #ee3643;
 	--basic-green: #63a63e;
@@ -32,6 +31,21 @@ body {
 	max-width: 940px;
 	margin: 0 auto;
 }
+
+/* === Visually Hidden Objects === */
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+/* === / Visually Hidden Objects === */
 
 .header {
 	background-color: #f3f7f8;
@@ -92,7 +106,6 @@ body {
 	color: #000000;
 }
 
-
 .header-top-links {
 	height: 100%;
 	margin-left: auto;
@@ -114,7 +127,7 @@ body {
 }
 
 .header-bookmarks {
-	padding-left:43px;
+	padding-left: 43px;
 }
 
 .header-cart {
@@ -140,7 +153,6 @@ body {
 	height: 16px;
 	width: 14px;
 	left: 20px;
-	
 }
 
 .header-cart::before {
@@ -176,7 +188,6 @@ body {
 .header-top-link:active {
 	color: rgba(255, 255, 255, 0.5);
 }
-
 
 .header-middle {
 	display: flex;
@@ -233,13 +244,13 @@ body {
 	margin-top: 7px;
 	font-style: normal;
 	padding: 0 5px;
-} 
+}
 
 .header-log-buttons {
 	margin-top: 3px;
 }
 
-.header-log-buttons  a {
+.header-log-buttons a {
 	display: inline-block;
 	text-decoration: none;
 	height: 45px;
@@ -255,8 +266,6 @@ body {
 	color: var(--basic-red);
 }
 
-
-
 .header-enter {
 	padding: 0 27px 0 45px;
 	position: relative;
@@ -267,8 +276,6 @@ body {
 	margin-left: 5px;
 	padding: 0 24px;
 	width: 150px;
-	
-	
 }
 
 .header-enter::before {
@@ -288,7 +295,7 @@ body {
 
 .header-enter:active,
 .header-registration:active {
-	color: var(--basic-greylight)
+	color: var(--basic-greylight);
 }
 .header-enter:active::before {
 	background: url('../img/icons/icon-login.svg') no-repeat;
@@ -326,6 +333,6 @@ body {
 }
 
 .header-menu-item a:active {
-	background-color: #1D2739;
-	color: rgba(255, 255, 255, 0.5) ;
+	background-color: #1d2739;
+	color: rgba(255, 255, 255, 0.5);
 }
