@@ -17,7 +17,7 @@
           </a>
           <form action="https://echo.htmlacademy.ru" method="GET">
             <label for="search" class="visually-hidden">Поиск</label>
-            <input class="search" type="search" placeholder="Поиск:" name="search">
+            <input class="search" type="search" id="search" placeholder="Поиск:" name="search">
           </form>
           <div class="header-top-links">
             <a href="#" class="header-bookmarks header-top-link">Закладки: 0</a>
@@ -256,24 +256,6 @@
           <img src="img/design/map-popup.png" alt="Карта офиса по адресу улица Большая Конюшенная, 19">
         </div>
         <a href="#contact-form">Заблудились? Напишите нам!</a>
-        <!-- Всплывающая форма -->
-        <div class="contact-form" id="contact-form">
-          <form action="https://echo.htmlacademy.ru" method="POST">
-            <p>
-              <label for="form-name">Ваше имя:</label>
-              <input type="text" placeholder="Имя Фамилия" name="name" id="form-name">
-            </p>
-            <p>
-              <label for="form-email">Ваш e-mail:</label>
-              <input type="email" placeholder="email@example.com" name="email" id="form-email">
-            </p>
-            <p>
-              <label for="form-question">Текст письма:</label>
-              <input type="text" placeholder="В свободной форме" name="question" id="form-question">
-            </p>
-            <button type="submit">Отправить</button>
-          </form>
-        </div>
       </section>
     </main>
     <footer>
@@ -317,5 +299,32 @@
         </span>
       </div>
     </footer>
+
+    <!-- Всплывающая форма -->
+    <div class="contact-form" id="contact-form">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+          <label for="form-name">Ваше имя:</label>
+          <input type="text" placeholder="Имя Фамилия" name="name" id="form-name">
+        </p>
+        <p>
+          <label for="form-email">Ваш e-mail:</label>
+          <input type="email" placeholder="email@example.com" name="email" id="form-email">
+        </p>
+        <p>
+          <label for="form-question">Текст письма:</label>
+          <input type="text" placeholder="В свободной форме" name="question" id="form-question">
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+
+      <!-- Модальное окно -->
+      <div class="added-to-cart">
+        <span>Товар добавлен в корзину!</span>
+        <a href="#">Оформить заказ</a>
+        <button>Продолжить покупки</button>
+      </div>
+
+    </div>
   </body>
 </html>
