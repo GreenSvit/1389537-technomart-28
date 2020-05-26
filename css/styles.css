@@ -1,4 +1,3 @@
-/* @import 'normalize.css'; */
 
 :root {
 	--basic-red: #ee3643;
@@ -13,10 +12,11 @@
 	--special-lilac: #dc91d8;
 	--special-greenlight: #8ed78f;
 	--special-yellowlight: #ffd180;
+	--special-red: #ba2732;
 
 	--success: #5fbb2d;
 	--warning: #ffbf47;
-	--error: #ba2732;
+	
 
 	--lightgrey: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), #eaeaea;
 }
@@ -24,13 +24,19 @@
 body {
 	font-family: 'Cuprum', sans-serif;
 	font-size: 18px;
+	background-color: var(--white);
+	line-height: 24px;
 }
+
+/* === Basic Wrapper === */
 
 .container {
 	width: 100%;
 	max-width: 940px;
 	margin: 0 auto;
 }
+/* === / Basic Wrapper === */
+
 
 /* === Visually Hidden Objects === */
 
@@ -46,6 +52,19 @@ body {
 }
 
 /* === / Visually Hidden Objects === */
+
+/* === Modal Windows === */
+
+.added-to-cart,
+.contact-form,
+.big-map {
+	display: none;
+}
+
+/* === / Modal Windows === */
+
+
+/* === Header === */
 
 .header {
 	background-color: #f3f7f8;
@@ -69,7 +88,7 @@ body {
 }
 
 .logo-technomart:active {
-	background-color: var(--error);
+	background-color: var(--special-red);
 }
 
 .search {
@@ -219,7 +238,6 @@ body {
 	height: 45px;
 	box-sizing: border-box;
 	border: 3px solid var(--white);
-	/* padding: 7px 35px 8px 74px; */
 	padding-top: 7px;
 	padding-left: 73px;
 	color: var(--basic-red);
@@ -336,3 +354,91 @@ body {
 	background-color: #1d2739;
 	color: rgba(255, 255, 255, 0.5);
 }
+
+/* === / Header === */
+
+
+/* === Company Info === */
+
+.company-info {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.company-desc-heading,
+.contacts-heading {
+	font-size: 30px;
+	font-family: 'Cuprum', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.transporters-list {
+	list-style: none;
+}
+
+.transporter {
+	font-family: 'Cuprum', sans-serif;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.company-info .button {
+	font-family: 'Cuprum', sans-serif;
+	display: inline-block;
+	color: var(--white);
+	text-align: center;
+	line-height: 38px;
+	font-size: 14px;
+	text-transform: uppercase;
+	background-color: var(--basic-red);
+	text-decoration: none;
+
+}
+
+/* === / Company Info === */
+
+
+/* === Footer === */
+
+.footer {
+	background-color: #32425C;
+	color: var(--white);
+}
+
+.footer a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer-top-nav {
+	color: #F3F7F9;
+}
+
+.footer-middle-nav,
+.footer .footer-bottom-contact {
+	color: var(--special-yellowlight);
+}
+
+.footer-bottom {
+	background-color: #293449;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.footer-address {
+	color: #F3F7F9;
+	font-style: normal;
+}
+
+
+
+/* === / Footer === */
