@@ -1,4 +1,3 @@
-
 :root {
 	--basic-red: #ee3643; 
 	--special-red: #ba2732;
@@ -18,20 +17,16 @@
 	--grey: #A9A9A9;
 
 	--special-yellowlight: #ffd180;
-	
+
 	--basic-navy: #32425C;
 	--dark-navy: #293449;
 	--deep-navy: #1d2739;
 	--dark-navy-deeper: #161d29;
 	--black: #000000;
-
-
-	
-
-}
+	}
 
 body {
-	font-family: 'Cuprum', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
 	background-color: var(--white);
 	line-height: 24px;
@@ -143,6 +138,7 @@ body {
 }
 .header-top-link {
 	display: inline-block;
+	vertical-align: top;
 	box-sizing: border-box;
 	text-decoration: none;
 	color: var(--white);
@@ -277,8 +273,10 @@ body {
 	margin-top: 3px;
 }
 
-.header-log-buttons a {
+.header-enter,
+.header-registration {
 	display: inline-block;
+	vertical-align: top;
 	text-decoration: none;
 	height: 45px;
 	line-height: 45px;
@@ -370,7 +368,7 @@ body {
 /* === Company Info === */
 
 .company-info {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 }
@@ -378,7 +376,7 @@ body {
 .company-desc-heading,
 .contacts-heading {
 	font-size: 30px;
-	font-family: 'Cuprum', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: 30px;
@@ -390,15 +388,15 @@ body {
 }
 
 .transporter {
-	font-family: 'Cuprum', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 24px;
 }
 
 .company-info .button {
-	font-family: 'Cuprum', sans-serif;
-	display: inline-block;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	display: block;
 	color: var(--white);
 	text-align: center;
 	line-height: 38px;
@@ -419,21 +417,23 @@ body {
 	color: var(--white);
 }
 
-/* Знаю, что так делать не рекомендуется (класс + тег), позже при подробной стилизации элементов исправлю, если можно =) */
-.footer a {
+
+.footer-link {
 	text-decoration: none;
 	color: inherit;
 }
 
-.footer a:hover {
+.footer-link:hover {
 	text-decoration: underline;
 }
 
-.footer a:active {
+.footer-link:active {
 	opacity: 0.5;
 }
 
-.footer ul {
+.footer-top-nav,
+.footer-middle-nav,
+.footer-socials {
 	list-style: none;
 }
 
@@ -457,6 +457,13 @@ body {
 	font-style: normal;
 }
 
+.footer-tel,
+.footer-logo,
+.footer-social {
+	text-decoration: none;
+	color: inherit;
+}
+
 /* === / Footer === */
 
 
@@ -478,7 +485,7 @@ body {
 	text-transform: uppercase;
 	font-size: 13px;
 	line-height: 18px;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 
@@ -501,7 +508,7 @@ body {
 /* === Filter === */
 
 .filter {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	text-transform: uppercase;
 	color: var(--black);
 }
@@ -543,7 +550,7 @@ body {
 
 .sort {
 	display: flex;
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	background-color: var(--basic-cream);
@@ -561,10 +568,6 @@ body {
 	display: flex;
 }
 
-.sort-type {
-
-}
-
 .sort-type-link {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.3);
@@ -575,7 +578,7 @@ body {
 }
 
 .catalog-item {
-	font-family: 'PT Sans', sans-serif;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 .catalog-item-link {
@@ -606,7 +609,7 @@ body {
 }
 
 .product-actions {
-	font-family: 'Cuprum', sans-serif;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 }
@@ -628,7 +631,6 @@ body {
 }
 
 .to-bookmarks-button {
-	display: inline-block;
 	color: var(--basic-navy);
 	text-decoration: none;
 	text-transform: uppercase;
