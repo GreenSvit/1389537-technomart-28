@@ -1,24 +1,33 @@
 
 :root {
-	--basic-red: #ee3643;
-	--basic-green: #63a63e;
-	--basic-grey: #3d546f;
-	--basic-greylight: #c5c5c5;
-	--basic-background: #f1f5f7;
-	--white: #ffffff;
-
-	--special-yellow: #ffbf47;
-	--special-blue: #3bbce3;
-	--special-lilac: #dc91d8;
-	--special-greenlight: #8ed78f;
-	--special-yellowlight: #ffd180;
+	--basic-red: #ee3643; 
 	--special-red: #ba2732;
 
-	--success: #5fbb2d;
-	--warning: #ffbf47;
+	--basic-green: #63a63e;
+	--light-green: #5fbb2d;
+	--dark-green: #367315;
+	--military-green: #518534;
+
+	--basic-greylight: #c5c5c5; 
+	--white: #ffffff;
+	--cream-white: #F3F7F9;
+	--cream-white-2: #f2f6f8;
+	--basic-cream: #F7F3EC;
+	--light-grey: #f3f7f8;
+	--special-grey: #e5e5e5;
+	--grey: #A9A9A9;
+
+	--special-yellowlight: #ffd180;
+	
+	--basic-navy: #32425C;
+	--dark-navy: #293449;
+	--deep-navy: #1d2739;
+	--dark-navy-deeper: #161d29;
+	--black: #000000;
+
+
 	
 
-	--lightgrey: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%), #eaeaea;
 }
 
 body {
@@ -67,11 +76,11 @@ body {
 /* === Header === */
 
 .header {
-	background-color: #f3f7f8;
+	background-color: var(--light-grey);
 }
 .header-line {
 	width: 100%;
-	background-color: #293449;
+	background-color: var(--dark-navy);
 	height: 42px;
 }
 
@@ -117,12 +126,12 @@ body {
 
 .search:focus {
 	background-color: var(--white);
-	color: #000000;
+	color: var(--black);
 	background-image: url('../img/icons/icon-search-focus.svg');
 }
 
 .search:focus::placeholder {
-	color: #000000;
+	color: var(--black);
 }
 
 .header-top-links {
@@ -187,12 +196,12 @@ body {
 }
 
 .header-order:hover {
-	background-color: var(--success);
+	background-color: var(--light-green);
 }
 
 .header-bookmarks:active,
 .header-cart:active {
-	background-color: #161d29;
+	background-color: var(--dark-navy-deeper);
 }
 
 .header-bookmarks:active::before,
@@ -274,7 +283,7 @@ body {
 	height: 45px;
 	line-height: 45px;
 	background-color: var(--white);
-	color: #000;
+	color: var(--black);
 	font-size: 21px;
 	box-sizing: border-box;
 }
@@ -338,8 +347,8 @@ body {
 	text-decoration: none;
 	text-align: center;
 	color: var(--white);
-	background-color: #32425c;
-	box-shadow: inset 0px -5px 0px #293449;
+	background-color: var(--basic-navy);
+	box-shadow: inset 0px -5px 0px var(--dark-navy);
 	height: 60px;
 	font-size: 18px;
 	padding-top: 19px;
@@ -347,11 +356,11 @@ body {
 }
 
 .header-menu-item a:hover {
-	background-color: #293449;
+	background-color: var(--dark-navy);
 }
 
 .header-menu-item a:active {
-	background-color: #1d2739;
+	background-color: var(--deep-navy);
 	color: rgba(255, 255, 255, 0.5);
 }
 
@@ -406,13 +415,22 @@ body {
 /* === Footer === */
 
 .footer {
-	background-color: #32425C;
+	background-color: var(--basic-navy);
 	color: var(--white);
 }
 
+/* Знаю, что так делать не рекомендуется (класс + тег), позже при подробной стилизации элементов исправлю, если можно =) */
 .footer a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.footer a:hover {
+	text-decoration: underline;
+}
+
+.footer a:active {
+	opacity: 0.5;
 }
 
 .footer ul {
@@ -420,7 +438,7 @@ body {
 }
 
 .footer-top-nav {
-	color: #F3F7F9;
+	color: var(--cream-white);
 }
 
 .footer-middle-nav,
@@ -429,19 +447,19 @@ body {
 }
 
 .footer-bottom {
-	background-color: #293449;
+	background-color: var(--dark-navy);
 	font-size: 16px;
 	line-height: 18px;
 }
 
 .footer-address {
-	color: #F3F7F9;
+	color: var(--cream-white);
 	font-style: normal;
 }
 
-
-
 /* === / Footer === */
+
+
 
 /* === INNER PAGE === */
 
@@ -456,7 +474,7 @@ body {
 
 .bread-crumbs-link {
 	text-decoration: none;
-	color: #000000;
+	color: var(--black);
 	text-transform: uppercase;
 	font-size: 13px;
 	line-height: 18px;
@@ -466,11 +484,11 @@ body {
 
 .perforators-heading {
 	display: block;
-	background-color: #f2f6f8;
+	background-color: var(--cream-white-2);
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
-	color: #32425c;
+	color: var(--basic-navy);
 	padding-left: 30px;
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -485,14 +503,14 @@ body {
 .filter {
 	font-family: 'PT Sans', sans-serif;
 	text-transform: uppercase;
-	color: #000000;
+	color: var(--black);
 }
 
 .filter-heading {
 	font-size: 13px;
 	line-height: 18px;
 	display: block;
-	background-color: #F7F3EC;
+	background-color: var(--basic-cream);
 	font-weight: normal;
 }
 
@@ -515,7 +533,7 @@ body {
 	display: block;
 	width: 100%;
 	background-color: inherit;
-	border: solid 1px #e5e5e5;
+	border: solid 1px var(--special-grey);
 }
 
 /* === / Filter === */
@@ -528,7 +546,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-	background-color: #F7F3EC;
+	background-color: var(--basic-cream);
 	text-transform: uppercase;
 }
 
@@ -562,7 +580,7 @@ body {
 
 .catalog-item-link {
 	text-decoration: none;
-	color: #000000;
+	color: var(--black);
 }
 
 .product-name {
@@ -576,7 +594,7 @@ body {
 	line-height: 18px;
 	font-weight: bold;
 	text-decoration: line-through;
-	color: #A9A9A9;
+	color: var(--grey);
 }
 
 .current-price {
@@ -596,16 +614,37 @@ body {
 .to-buy-button {
 	color: var(--white);
 	background: var(--basic-green);
-	box-shadow: inset 0px -3px 0px #367315;
+	box-shadow: inset 0px -3px 0px var(--dark-green);
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
+.to-buy-button:hover {
+	background-color: var(--light-green);
+}
+
+.to-buy-button:active {
+	background-color: var(--military-green);
+}
+
 .to-bookmarks-button {
-	color: #32425C;
+	display: inline-block;
+	color: var(--basic-navy);
 	text-decoration: none;
 	text-transform: uppercase;
+	border: 3px solid #63A63E;
+	border-radius: 2px;
 }
+
+.to-bookmarks-button:hover {
+	border-color: var(--basic-navy);
+}
+
+.to-bookmarks-button:active {
+	border-color: var(--basic-navy);
+	opacity: 0.5;
+}
+
 
 
 /* / === Catalog Inner === */
