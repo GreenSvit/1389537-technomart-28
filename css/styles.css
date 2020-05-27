@@ -442,3 +442,170 @@ body {
 
 
 /* === / Footer === */
+
+/* === INNER PAGE === */
+
+.bread-crumbs {
+	display: flex;
+	list-style: none;
+}
+
+.bread-crumbs-item {
+	margin-right: 10px;
+}
+
+.bread-crumbs-link {
+	text-decoration: none;
+	color: #000000;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 18px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+
+.perforators-heading {
+	display: block;
+	background-color: #f2f6f8;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #32425c;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.catalog-wrapper {
+	display: flex;
+}
+
+/* === Filter === */
+
+.filter {
+	font-family: 'PT Sans', sans-serif;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.filter-heading {
+	font-size: 13px;
+	line-height: 18px;
+	display: block;
+	background-color: #F7F3EC;
+	font-weight: normal;
+}
+
+.filter-legend {
+	font-size: 17px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.filter-label {
+	font-size: 15px;
+	line-height: 19px;
+}
+
+.filter-submit {
+	font-size: 13px;
+	line-height: 18px;
+	font-family: inherit;
+	text-transform: uppercase;
+	display: block;
+	width: 100%;
+	background-color: inherit;
+	border: solid 1px #e5e5e5;
+}
+
+/* === / Filter === */
+
+
+/* === Catalog Inner === */
+
+.sort {
+	display: flex;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	background-color: #F7F3EC;
+	text-transform: uppercase;
+}
+
+.sort-heading {
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: normal;
+}
+
+.sort-types {
+	list-style: none;
+	display: flex;
+}
+
+.sort-type {
+
+}
+
+.sort-type-link {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-list {
+	list-style: none;
+}
+
+.catalog-item {
+	font-family: 'PT Sans', sans-serif;
+}
+
+.catalog-item-link {
+	text-decoration: none;
+	color: #000000;
+}
+
+.product-name {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.old-price {
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: bold;
+	text-decoration: line-through;
+	color: #A9A9A9;
+}
+
+.current-price {
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: bold;
+	background-color: var(--basic-red);
+	color: var(--white);
+}
+
+.product-actions {
+	font-family: 'Cuprum', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.to-buy-button {
+	color: var(--white);
+	background: var(--basic-green);
+	box-shadow: inset 0px -3px 0px #367315;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.to-bookmarks-button {
+	color: #32425C;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+/* / === Catalog Inner === */
