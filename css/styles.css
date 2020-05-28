@@ -1,5 +1,5 @@
 :root {
-	--basic-red: #ee3643; 
+	--basic-red: #ee3643;
 	--special-red: #ba2732;
 
 	--basic-green: #63a63e;
@@ -7,25 +7,25 @@
 	--dark-green: #367315;
 	--military-green: #518534;
 
-	--basic-greylight: #c5c5c5; 
+	--basic-greylight: #c5c5c5;
 	--white: #ffffff;
-	--cream-white: #F3F7F9;
+	--cream-white: #f3f7f9;
 	--cream-white-2: #f2f6f8;
-	--basic-cream: #F7F3EC;
+	--basic-cream: #f7f3ec;
 	--light-grey: #f3f7f8;
 	--special-grey: #e5e5e5;
-	--special-biege: #F9F5F0;
-	--grey: #A9A9A9;
-	--blue-grey: #F1F5F7;
+	--special-biege: #f9f5f0;
+	--grey: #a9a9a9;
+	--blue-grey: #f1f5f7;
 
 	--special-yellowlight: #ffd180;
 
-	--basic-navy: #32425C;
+	--basic-navy: #32425c;
 	--dark-navy: #293449;
 	--deep-navy: #1d2739;
 	--dark-navy-deeper: #161d29;
 	--black: #000000;
-	}
+}
 
 body {
 	min-width: 940px;
@@ -40,7 +40,7 @@ body {
 img {
 	max-width: 100%;
 	height: auto;
-  }
+}
 
 /* === Basic Wrapper === */
 
@@ -50,7 +50,6 @@ img {
 	margin: 0 auto;
 }
 /* === / Basic Wrapper === */
-
 
 /* === Visually Hidden Objects === */
 
@@ -76,7 +75,6 @@ img {
 }
 
 /* === / Modal Windows === */
-
 
 /* === Header === */
 
@@ -350,7 +348,7 @@ img {
 	flex-grow: 1;
 }
 
-.header-menu-item a {
+.header-menu-link {
 	display: block;
 	text-decoration: none;
 	text-align: center;
@@ -363,17 +361,16 @@ img {
 	box-sizing: border-box;
 }
 
-.header-menu-item a:hover {
+.header-menu-link:hover {
 	background-color: var(--dark-navy);
 }
 
-.header-menu-item a:active {
+.header-menu-link:active {
 	background-color: var(--deep-navy);
 	color: rgba(255, 255, 255, 0.5);
 }
 
 /* === / Header === */
-
 
 /* === Popular Groups === */
 
@@ -403,12 +400,9 @@ img {
 	line-height: 38px;
 	text-align: center;
 	text-transform: uppercase;
-
 }
 
-
 /* === / Popular Groups === */
-
 
 /* === Services === */
 
@@ -417,7 +411,6 @@ img {
 }
 
 /* === / Services === */
-
 
 /* === Company Info === */
 
@@ -458,11 +451,9 @@ img {
 	text-transform: uppercase;
 	background-color: var(--basic-red);
 	text-decoration: none;
-
 }
 
 /* === / Company Info === */
-
 
 /* === Footer === */
 
@@ -470,7 +461,6 @@ img {
 	background-color: var(--basic-navy);
 	color: var(--white);
 }
-
 
 .footer-link {
 	text-decoration: none;
@@ -520,8 +510,6 @@ img {
 
 /* === / Footer === */
 
-
-
 /* === INNER PAGE === */
 
 .bread-crumbs {
@@ -541,7 +529,6 @@ img {
 	line-height: 18px;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 }
-
 
 .perforators-heading {
 	display: block;
@@ -598,7 +585,6 @@ img {
 }
 
 /* === / Filter === */
-
 
 /* === Catalog Inner === */
 
@@ -688,7 +674,7 @@ img {
 	color: var(--basic-navy);
 	text-decoration: none;
 	text-transform: uppercase;
-	border: 3px solid #63A63E;
+	border: 3px solid #63a63e;
 	border-radius: 2px;
 }
 
@@ -700,7 +686,6 @@ img {
 	border-color: var(--basic-navy);
 	opacity: 0.5;
 }
-
 
 .catalog-pagination {
 	display: flex;
