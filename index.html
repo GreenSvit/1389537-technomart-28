@@ -52,7 +52,7 @@
             </div>
         </header>
         <main>
-            <section class="benefits">
+            <section class="benefits container">
                 <ul>
                     <li class="benefit-item"><a href="#" class="benefit-materials">Материалы</a></li>
                     <li class="benefit-item"><a href="#" class="benefit-tools">Инструмент</a></li>
@@ -62,9 +62,11 @@
                     <li class="benefit-item"><a href="#" class="benefit-slider">Слайдер</a></li>
                 </ul>
             </section>
-            <section class="popular-goods">
-                <h2 class="popular-goods-heading">Популярные товары:</h2>
-                <a href="#">Все популярные товары</a>
+            <section class="popular-goods container">
+                <div class="popular-group">
+                    <h2 class="popular-group-heading">Популярные товары:</h2>
+                    <a href="#" class="popular-group-button">Все популярные товары</a>
+                </div>
                 <ul class="popular-goods-list">
                     <li class="catalog-item">
                         <article>
@@ -123,9 +125,11 @@
                     </li>
                 </ul>
             </section>
-            <section class="popular-manufacturers">
-                <h2>Популярные производители:</h2>
-                <a href="#">Все популярные производители</a>
+            <section class="popular-manufacturers container">
+                <div class="popular-group">
+                    <h2 class="popular-group-heading">Популярные производители:</h2>
+                    <a href="#" class="popular-group-button">Все производители</a>
+                </div>
                 <ul>
                     <li>
                         <a href="#">
@@ -178,53 +182,55 @@
                 </ul>
             </section>
             <section class="services">
-                <h2>Сервисы</h2>
-                <p>
-                    Хороший интернет-магазин отличается от плохого не только ценами!
-                    Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-                </p>
-                <ul>
-                    <li>
-                        <button type="button">Доставка</button>
-                    </li>
-                    <li>
-                        <button type="button">Гарантия</button>
-                    </li>
-                    <li>
-                        <button type="button">Кредит</button>
-                    </li>
-                </ul>
-                <div class="services-delivery">
-                    <h3>
-                        Доставка
-                    </h3>
+                <div class="container">
+                    <h2>Сервисы</h2>
                     <p>
-                        Мы с удовольсвтием доставим ваш товар прямо
-                        к вашему подъезду совершенно бесплатно!
-                        Ведь мы неплохо заработаем, 
-                        поднимая его на ваш этаж.
+                        Хороший интернет-магазин отличается от плохого не только ценами!
+                        Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                     </p>
-                </div>
-                <div class="services-guarantee">
-                    <h3>Гарантия</h3>
-                    <p>
-                        Если купленный у нас товар поломается или заискрит, 
-                        а также в случае пожара, спровоцированного его 
-                        возгоранием,  вы всегда можете быть уверены в нашей 
-                        гарантии. Мы обменяем сгоревший товар на новый. 
-                        Дом уж восстановите как-нибудь сами.
-                    </p>
-                </div>
-                <div class="services-credit">
-                    <h3>Кредит</h3>
-                    <p>
-                        Залезть в долговую яму стало проще!
-                        Кредитные консультанты придут вам на помощь.
-                    </p>
-                    <a href="#">Отправить заявку</a>
+                    <ul>
+                        <li>
+                            <button type="button">Доставка</button>
+                        </li>
+                        <li>
+                            <button type="button">Гарантия</button>
+                        </li>
+                        <li>
+                            <button type="button">Кредит</button>
+                        </li>
+                    </ul>
+                    <div class="services-delivery">
+                        <h3>
+                            Доставка
+                        </h3>
+                        <p>
+                            Мы с удовольсвтием доставим ваш товар прямо
+                            к вашему подъезду совершенно бесплатно!
+                            Ведь мы неплохо заработаем, 
+                            поднимая его на ваш этаж.
+                        </p>
+                    </div>
+                    <div class="services-guarantee">
+                        <h3>Гарантия</h3>
+                        <p>
+                            Если купленный у нас товар поломается или заискрит, 
+                            а также в случае пожара, спровоцированного его 
+                            возгоранием,  вы всегда можете быть уверены в нашей 
+                            гарантии. Мы обменяем сгоревший товар на новый. 
+                            Дом уж восстановите как-нибудь сами.
+                        </p>
+                    </div>
+                    <div class="services-credit">
+                        <h3>Кредит</h3>
+                        <p>
+                            Залезть в долговую яму стало проще!
+                            Кредитные консультанты придут вам на помощь.
+                        </p>
+                        <a href="#">Отправить заявку</a>
+                    </div>
                 </div>
             </section>
-            <div class="company-info">
+            <div class="company-info container">
                 <section class="company-desc">
                     <h2 class="company-desc-heading">Компания «Техномарт»</h2>
                     <p>Настоящие мужской шоппинг начинается здесь!
@@ -258,7 +264,7 @@
         </main>
         
         <footer class="footer">
-            <div class="footer-top">
+            <div class="footer-top container">
                 <a class="footer-logo" href="#">Техномарт</a>
                 <ul class="footer-top-nav">
                     <li><a class="footer-link" href="#">Компания</a></li>
@@ -268,7 +274,7 @@
                     <li><a class="footer-link" href="#">Контакты</a></li>
                 </ul>
             </div>
-            <div class="footer-middle">
+            <div class="footer-middle container">
                 <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
                 <a class="footer-tel" href="tel:78125550555">+7 (812) 555-05-55</a>
                 <ul class="footer-middle-nav">
@@ -279,23 +285,25 @@
                 </ul>
             </div>
             <div class="footer-bottom">
-                <p>
-                    &copy; 2010-2017 Компания "Техномарт"
-                    Все права защищены
-                </p>
-                <ul class="footer-socials">
-                    <li><a class="footer-social" href="vk.com">Вконтакте</a></li>
-                    <li><a class="footer-social" href="fb.com">Facebook</a></li>
-                    <li><a class="footer-social" href="instagram.com">Instagram</a></li>
-                </ul>
-                <span>
-                        Обратная связь:
-                        <a class="footer-bottom-contact footer-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-                </span>
-                <span>
-                        Разработано -
-                        <a class="footer-bottom-contact footer-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-                </span>
+                <div class="container">
+                    <p>
+                        &copy; 2010-2017 Компания "Техномарт"
+                        Все права защищены
+                    </p>
+                    <ul class="footer-socials">
+                        <li><a class="footer-social" href="vk.com">Вконтакте</a></li>
+                        <li><a class="footer-social" href="fb.com">Facebook</a></li>
+                        <li><a class="footer-social" href="instagram.com">Instagram</a></li>
+                    </ul>
+                    <span>
+                            Обратная связь:
+                            <a class="footer-bottom-contact footer-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                    </span>
+                    <span>
+                            Разработано -
+                            <a class="footer-bottom-contact footer-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                    </span>
+                </div>
             </div>
         </footer>
 

@@ -14,7 +14,9 @@
 	--basic-cream: #F7F3EC;
 	--light-grey: #f3f7f8;
 	--special-grey: #e5e5e5;
+	--special-biege: #F9F5F0;
 	--grey: #A9A9A9;
+	--blue-grey: #F1F5F7;
 
 	--special-yellowlight: #ffd180;
 
@@ -26,11 +28,19 @@
 	}
 
 body {
+	min-width: 940px;
+	margin: 0;
+	padding: 0;
 	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
 	background-color: var(--white);
 	line-height: 24px;
 }
+
+img {
+	max-width: 100%;
+	height: auto;
+  }
 
 /* === Basic Wrapper === */
 
@@ -365,6 +375,50 @@ body {
 /* === / Header === */
 
 
+/* === Popular Groups === */
+
+.popular-group {
+	background-color: var(--special-biege);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.popular-group-heading {
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	margin: 30px;
+	color: var(--basic-navy);
+	font-weight: normal;
+}
+
+.popular-group-button {
+	background-color: var(--basic-red);
+	text-decoration: none;
+	color: var(--white);
+	width: 192px;
+	height: 38px;
+	font-size: 14px;
+	line-height: 38px;
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+
+/* === / Popular Groups === */
+
+
+/* === Services === */
+
+.services {
+	background-color: var(--blue-grey);
+}
+
+/* === / Services === */
+
+
 /* === Company Info === */
 
 .company-info {
@@ -648,5 +702,41 @@ body {
 }
 
 
+.catalog-pagination {
+	display: flex;
+	justify-content: space-between;
+	width: 284px;
+	height: 38px;
+}
+
+.page-link {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 38px;
+	color: var(--black);
+	border: 1px solid var(--special-grey);
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+
+.about-perforators {
+	background-color: var(--blue-grey);
+}
+
+.about-perforators-heading {
+	font-size: 30px;
+	line-height: 30px;
+	color: var(--black);
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.about-perforators-desc {
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	color: var(--black);
+}
 
 /* / === Catalog Inner === */
