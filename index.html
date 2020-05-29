@@ -53,13 +53,13 @@
         </header>
         <main>
             <section class="benefits container">
-                <ul>
+                <ul class="benefits-list">
                     <li class="benefit-item"><a href="#" class="benefit-materials">Материалы</a></li>
                     <li class="benefit-item"><a href="#" class="benefit-tools">Инструмент</a></li>
                     <li class="benefit-item"><a href="#" class="benefit-technic">Техника</a></li>
                     <li class="benefit-item"><a href="#" class="benefit-sale">Скидки 50%</a></li>
                     <li class="benefit-item"><a href="#" class="benefit-delivery">Доставка</a></li>
-                    <li class="benefit-item"><a href="#" class="benefit-slider">Слайдер</a></li>
+                    <li class="benefit-item slider"><a href="#" class="benefit-slider">Слайдер</a></li>
                 </ul>
             </section>
             <section class="popular-goods container">
@@ -130,7 +130,7 @@
                     <h2 class="popular-group-heading">Популярные производители:</h2>
                     <a href="#" class="popular-group-button">Все производители</a>
                 </div>
-                <ul>
+                <ul class="popular-manufacturers-list">
                     <li>
                         <a href="#">
                             <span class="visually-hidden">Bosch</span>
@@ -188,45 +188,49 @@
                         Хороший интернет-магазин отличается от плохого не только ценами!
                         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                     </p>
-                    <ul>
-                        <li>
-                            <button type="button">Доставка</button>
-                        </li>
-                        <li>
-                            <button type="button">Гарантия</button>
-                        </li>
-                        <li>
-                            <button type="button">Кредит</button>
-                        </li>
-                    </ul>
-                    <div class="services-delivery">
-                        <h3>
-                            Доставка
-                        </h3>
-                        <p>
-                            Мы с удовольсвтием доставим ваш товар прямо
-                            к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем, 
-                            поднимая его на ваш этаж.
-                        </p>
-                    </div>
-                    <div class="services-guarantee">
-                        <h3>Гарантия</h3>
-                        <p>
-                            Если купленный у нас товар поломается или заискрит, 
-                            а также в случае пожара, спровоцированного его 
-                            возгоранием,  вы всегда можете быть уверены в нашей 
-                            гарантии. Мы обменяем сгоревший товар на новый. 
-                            Дом уж восстановите как-нибудь сами.
-                        </p>
-                    </div>
-                    <div class="services-credit">
-                        <h3>Кредит</h3>
-                        <p>
-                            Залезть в долговую яму стало проще!
-                            Кредитные консультанты придут вам на помощь.
-                        </p>
-                        <a href="#">Отправить заявку</a>
+                    <div class="services-wrapper">
+                        <ul>
+                            <li>
+                                <button type="button">Доставка</button>
+                            </li>
+                            <li>
+                                <button type="button">Гарантия</button>
+                            </li>
+                            <li>
+                                <button type="button">Кредит</button>
+                            </li>
+                        </ul>
+                        <div class="servisec-list">
+                            <div class="services-delivery">
+                                <h3>
+                                    Доставка
+                                </h3>
+                                <p>
+                                    Мы с удовольсвтием доставим ваш товар прямо
+                                    к вашему подъезду совершенно бесплатно!
+                                    Ведь мы неплохо заработаем, 
+                                    поднимая его на ваш этаж.
+                                </p>
+                            </div>
+                            <div class="services-guarantee">
+                                <h3>Гарантия</h3>
+                                <p>
+                                    Если купленный у нас товар поломается или заискрит, 
+                                    а также в случае пожара, спровоцированного его 
+                                    возгоранием,  вы всегда можете быть уверены в нашей 
+                                    гарантии. Мы обменяем сгоревший товар на новый. 
+                                    Дом уж восстановите как-нибудь сами.
+                                </p>
+                            </div>
+                            <div class="services-credit">
+                                <h3>Кредит</h3>
+                                <p>
+                                    Залезть в долговую яму стало проще!
+                                    Кредитные консультанты придут вам на помощь.
+                                </p>
+                                <a href="#" class="credit-button">Отправить заявку</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -275,8 +279,10 @@
                 </ul>
             </div>
             <div class="footer-middle container">
-                <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-                <a class="footer-tel" href="tel:78125550555">+7 (812) 555-05-55</a>
+                <section class="footer-contacts">
+                    <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+                    <a class="footer-tel" href="tel:78125550555">+7 (812) 555-05-55</a>
+                </section>
                 <ul class="footer-middle-nav">
                     <li><a class="footer-link" href="#">Материалы</a></li>
                     <li><a class="footer-link" href="#">Техника</a></li>

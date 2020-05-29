@@ -372,6 +372,29 @@ img {
 
 /* === / Header === */
 
+
+/* === Benefits === */
+
+.benefits-list {
+	display: grid;
+	list-style: none;
+	padding: 0;
+	gap: 20px;
+	grid-template-columns: 300px 300px 300px;
+	grid-template-rows: 123px 123px 123px;
+}
+
+.slider {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4;
+
+}
+
+/* === / Benefits === */
+
+
 /* === Popular Groups === */
 
 .popular-group {
@@ -402,12 +425,50 @@ img {
 	text-transform: uppercase;
 }
 
+
+.popular-goods-list {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: auto auto auto auto;
+}
+
+
+.popular-manufacturers-list {
+	list-style: none;
+	padding: 0;
+	display: grid;
+	gap: 20px;
+	grid-template-columns: 220px 220px 220px 220px;
+	grid-template-rows: 145px 145px;
+}
+
 /* === / Popular Groups === */
+
+ 
 
 /* === Services === */
 
 .services {
 	background-color: var(--blue-grey);
+}
+
+.services-wrapper {
+	display: flex;
+}
+
+.credit-button {
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	display: block;
+	color: var(--white);
+	text-align: center;
+	line-height: 38px;
+	font-size: 14px;
+	text-transform: uppercase;
+	background-color: var(--basic-red);
+	text-decoration: none;
+
 }
 
 /* === / Services === */
@@ -418,6 +479,7 @@ img {
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
+	display: flex;
 }
 
 .company-desc-heading,
@@ -462,6 +524,12 @@ img {
 	color: var(--white);
 }
 
+.footer-top,
+.footer-middle,
+.footer-bottom .container {
+	display: flex;
+}
+
 .footer-link {
 	text-decoration: none;
 	color: inherit;
@@ -479,6 +547,8 @@ img {
 .footer-middle-nav,
 .footer-socials {
 	list-style: none;
+	padding: 0;
+	display: flex;
 }
 
 .footer-top-nav {
@@ -544,6 +614,7 @@ img {
 
 .catalog-wrapper {
 	display: flex;
+	justify-content: space-between;
 }
 
 /* === Filter === */
@@ -614,11 +685,19 @@ img {
 }
 
 .catalog-list {
+	padding: 0;
 	list-style: none;
+	display: grid;
+	gap: 18px 20px;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
 }
 
 .catalog-item {
 	font-family: 'PT Sans', 'Arial', sans-serif;
+	width: 220px;
+	height: 318px;
+	box-sizing: border-box;
 }
 
 .catalog-item-link {
