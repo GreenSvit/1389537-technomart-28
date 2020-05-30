@@ -339,9 +339,10 @@ img {
 }
 
 .header-menu-list {
+	margin: 0;
 	display: flex;
 	list-style: none;
-	padding-left: 0;
+	padding: 0;
 }
 
 .header-menu-item {
@@ -372,13 +373,13 @@ img {
 
 /* === / Header === */
 
-
 /* === Benefits === */
 
 .benefits-list {
 	display: grid;
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	gap: 20px;
 	grid-template-columns: 300px 300px 300px;
 	grid-template-rows: 123px 123px 123px;
@@ -389,11 +390,9 @@ img {
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 4;
-
 }
 
 /* === / Benefits === */
-
 
 /* === Popular Groups === */
 
@@ -425,19 +424,19 @@ img {
 	text-transform: uppercase;
 }
 
-
 .popular-goods-list {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	display: grid;
 	gap: 20px;
 	grid-template-columns: auto auto auto auto;
 }
 
-
 .popular-manufacturers-list {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	display: grid;
 	gap: 20px;
 	grid-template-columns: 220px 220px 220px 220px;
@@ -445,8 +444,6 @@ img {
 }
 
 /* === / Popular Groups === */
-
- 
 
 /* === Services === */
 
@@ -468,7 +465,6 @@ img {
 	text-transform: uppercase;
 	background-color: var(--basic-red);
 	text-decoration: none;
-
 }
 
 /* === / Services === */
@@ -494,6 +490,8 @@ img {
 
 .transporters-list {
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .transporter {
@@ -548,6 +546,7 @@ img {
 .footer-socials {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 	display: flex;
 }
 
@@ -585,6 +584,8 @@ img {
 .bread-crumbs {
 	display: flex;
 	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 .bread-crumbs-item {
@@ -676,6 +677,8 @@ img {
 
 .sort-types {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 	display: flex;
 }
 
@@ -687,6 +690,7 @@ img {
 .catalog-list {
 	padding: 0;
 	list-style: none;
+	margin: 0;
 	display: grid;
 	gap: 18px 20px;
 	grid-template-columns: auto auto auto;
