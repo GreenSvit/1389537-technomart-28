@@ -1,6 +1,8 @@
 :root {
 	--basic-red: #ee3643;
 	--special-red: #ba2732;
+	--dark-red: #b52933;
+	--red-darker: #8e1d26;
 	
 	--special-yellowlight: #ffd180;
 	--special-yellow: #FFBF47;
@@ -141,15 +143,19 @@ img {
 .logo-technomart::after {
 	content: '';
 	position: absolute;
-	top: 42px;
+	bottom: -5px;
 	width: 100%;
 	height: 5px;
-	background-color: #b52933;
+	background-color: var(--dark-red);
 	left: 0;
 }
 
 .logo-technomart:active {
 	background-color: var(--special-red);
+}
+
+.logo-technomart:active::after {
+	background-color: var(--red-darker);
 }
 
 
@@ -299,7 +305,7 @@ img {
 	margin: 0 auto;
 	display: block;
 	text-decoration: none;
-	width: 270px;
+	min-width: 270px;
 	min-height: 45px;
 	box-sizing: border-box;
 	border: 3px solid var(--white);
@@ -451,7 +457,9 @@ img {
 	padding-left: 23px;
 	padding-top: 20px;
 	background-repeat: no-repeat;
-	
+	min-width: 300px;
+	min-height: 123px;
+	box-sizing: border-box;
 }
 
 .benefit-button {
@@ -468,6 +476,14 @@ img {
 	font-weight: normal;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.benefit-button:hover {
+	background-color: rgba(197, 197, 197, 0.3);;
+}
+
+.benefit-button:active {
+	background-color: rgba(169, 169, 169, 0.3);
 }
 
 .benefit-materials {
@@ -549,11 +565,13 @@ img {
 	font-weight: normal;
 }
 
-.popular-group-button {
+.group-button {
+	display: block;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	background-color: var(--basic-red);
 	text-decoration: none;
 	color: var(--white);
-	width: 192px;
+	min-width: 192px;
 	font-size: 14px;
 	line-height: 18px;
 	padding-top: 11px;
@@ -564,13 +582,23 @@ img {
 	margin-bottom: 2px;
 }
 
+.group-button:active {
+	background-color: var(--special-red);
+}
+
+
 .popular-goods-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-top: 20px;
+}
+
+.popular-manufacturers {
+	margin-top: 70px;
 }
 
 .popular-manufacturers-list {
@@ -581,6 +609,26 @@ img {
 	gap: 20px;
 	grid-template-columns: 220px 220px 220px 220px;
 	grid-template-rows: 145px 145px;
+	margin-top: 20px;
+}
+
+.manufacturer {
+	min-width: 220px;
+	min-height: 145px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	border: 1px solid var(--border-white);
+}
+
+.manufacturer:hover {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.manufacturer:active {
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	opacity: 0.5;
 }
 
 /* === / Popular Groups === */
@@ -589,6 +637,7 @@ img {
 
 .services {
 	background-color: var(--blue-grey);
+	margin-top: 70px;
 }
 
 .services-wrapper {
@@ -618,6 +667,16 @@ img {
 	line-height: 24px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 70px;
+}
+
+.company-desc {
+	width: 478px;
+}
+
+.contacts {
+	width: 300px;
 }
 
 .company-desc-heading,
@@ -628,6 +687,25 @@ img {
 	font-weight: normal;
 	line-height: 30px;
 	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+.delivery-desc {
+	width: 400px;
+	margin-top: 27px;
+	margin-bottom: 0;
+}
+
+.contacts-offer {
+	width: 200px;
+	padding: 0;
+	margin: 0;
+}
+
+.contacts-map {
+	display: block;
+	margin-top: 32px;
 }
 
 .transporters-list {
@@ -641,19 +719,42 @@ img {
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 24px;
+	padding-left: 37px;
+	margin-bottom: 12px;
+	position: relative;
 }
 
-.company-info .button {
-	font-family: 'Cuprum', 'Arial', sans-serif;
-	display: block;
-	color: var(--white);
-	text-align: center;
-	line-height: 38px;
-	font-size: 14px;
-	text-transform: uppercase;
+.transporter::before {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 2px;
 	background-color: var(--basic-red);
-	text-decoration: none;
+	top: 14px;
+	left: 0;
 }
+
+.transporter:nth-child(2)::before {
+	top: 12px;
+}
+
+.transporter:nth-child(3)::before {
+	top: 10px;
+}
+
+.more-info-button {
+	width: 220px;
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+
+
+.contacts-form-button {
+	min-width: 100%;
+	margin-bottom: 0;
+	margin-top: 17px;
+}
+
 
 /* === / Company Info === */
 
@@ -662,6 +763,7 @@ img {
 .footer {
 	background-color: var(--basic-navy);
 	color: var(--white);
+	margin-top: 70px;
 }
 
 .footer-top,
@@ -693,6 +795,15 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 }
+
+.footer-top .logo-technomart {
+	height: 63px;
+	padding-top: 20px;
+	padding-right: 41px;
+	padding-bottom: 20px;
+	padding-left: 41px;
+}
+
 
 .footer-top-nav {
 	color: var(--cream-white);
@@ -840,7 +951,7 @@ img {
 	list-style: none;
 	margin: 0;
 	display: grid;
-	gap: 18px 20px;
+	grid-gap: 18px 20px;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: auto auto auto;
 }
@@ -855,9 +966,6 @@ img {
 	min-height: 318px;
 	box-sizing: border-box;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
 }
 
 .image-wrapper {
@@ -870,12 +978,20 @@ img {
 .catalog-item-link {
 	text-decoration: none;
 	color: var(--black);
+	display: flex;
+	flex-direction: column;
+	min-height: 148px;
 }
 
 .product-name {
 	font-size: 18px;
 	font-weight: bold;
 	line-height: 20px;
+	width: 185px;
+	margin: 0;
+	margin-left: 17px;
+	margin-top: 11px;
+	margin-right: 18px;
 }
 
 .old-price {
@@ -884,14 +1000,28 @@ img {
 	font-weight: bold;
 	text-decoration: line-through;
 	color: var(--grey);
+	margin-top: 7px;
 }
 
 .current-price {
+	box-sizing: border-box;
+	display: block;
+	vertical-align: middle;
 	font-size: 17px;
 	line-height: 18px;
 	font-weight: bold;
-	background-color: var(--basic-red);
+	background-image: url('../img/icons/red-button.svg');
+	background-repeat: no-repeat;
+	padding-top: 10px;
+	padding-right: 7px;
+	min-width: 141px;
+	min-height: 38px;
 	color: var(--white);
+	margin-top: auto;
+	margin-left: 44px;
+	margin-bottom: 20px;
+	text-align: start;
+	padding-left: 32px;
 }
 
 .product-actions {
@@ -903,7 +1033,7 @@ img {
 	top: 0;
 	left: 0;
 	min-width: 100%;
-	min-height: 150px;
+	min-height: 168px;
 	padding-top: 37px;
 	padding-right: 43px;
 	padding-left: 40px;
