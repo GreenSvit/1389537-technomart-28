@@ -33,6 +33,7 @@
 	--dark-navy: #293449;
 	--deep-navy: #1d2739;
 	--dark-navy-deeper: #161d29;
+	--navy-black: #212A3A;
 	--black: #000000;
 }
 
@@ -784,6 +785,7 @@ img {
 
 .footer-link:active {
 	opacity: 0.5;
+	text-decoration: none;
 }
 
 .footer-top-nav,
@@ -796,6 +798,10 @@ img {
 	flex-wrap: wrap;
 }
 
+.footer-top {
+	justify-content: space-between;
+}
+
 .footer-top .logo-technomart {
 	height: 63px;
 	padding-top: 20px;
@@ -804,13 +810,40 @@ img {
 	padding-left: 41px;
 }
 
+.footer-top .footer-link,
+.footer-middle .footer-link {
+	margin-left: 59px;
+}
+
 
 .footer-top-nav {
 	color: var(--cream-white);
+	margin-top: 37px;
+}
+
+.footer-middle {
+	margin-top: 28px;
+	justify-content: space-between;
+	margin-bottom: 54px;
+}
+
+.footer-address {
+	color: var(--cream-white);
+	font-style: normal;
+	padding-left: 2px;
+}
+
+.footer-tel {
+	padding-left: 3px;
+	padding-top: 1px;
+}
+
+.footer-middle-nav {
+	margin-top: 4px;
 }
 
 .footer-middle-nav,
-.footer .footer-bottom-contact {
+.footer-bottom-contact {
 	color: var(--special-yellowlight);
 }
 
@@ -818,11 +851,9 @@ img {
 	background-color: var(--dark-navy);
 	font-size: 16px;
 	line-height: 18px;
-}
-
-.footer-address {
-	color: var(--cream-white);
-	font-style: normal;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	
 }
 
 .footer-tel,
@@ -830,6 +861,65 @@ img {
 .footer-social {
 	text-decoration: none;
 	color: inherit;
+}
+
+.copyright {
+	width: 227px;
+	margin: 0;
+	margin-top: 1px;
+	margin-left: 2px;
+}
+
+.footer-socials {
+	margin-left: 161px;
+}
+
+.footer-social {
+	display: block;
+	width: 42px;
+	height: 42px;
+	background-color: var(--navy-black);
+	border-radius: 50%;
+	margin-right: 3px;
+}
+
+.footer-social:hover {
+	background-color: var(--basic-red);
+}
+
+
+
+.footer-social.vk {
+	background-image: url('../img/icons/vk.svg');
+	background-repeat: no-repeat;
+	background-position: 8px 13px;
+}
+
+.footer-social.fb {
+	background-image: url('../img/icons/fb.svg');
+	background-repeat: no-repeat;
+	background-position: 15px 10px;
+}
+
+.footer-social.instagram {
+	background-image: url('../img/icons/inst.svg');
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+}
+
+.footer-mail {
+	margin-left: 116px;
+	width: 137px;
+}
+
+.footer-developer {
+	margin-left: 51px;
+	width: 100px;
+}
+
+.footer-bottom-contact:active {
+	opacity: 1;
+	color: var(--basic-red);
 }
 
 /* === / Footer === */
@@ -1137,3 +1227,37 @@ img {
 }
 
 /* / === Catalog Inner === */
+
+
+/* === Pop Up Form === */
+
+.contact-form {
+	display: block;
+	position: fixed;
+	box-sizing: border-box;
+	width: 620px;
+	min-height: 430px;
+	background-color: var(--white);
+	box-shadow: 
+		0px 20px 40px rgba(0, 0, 0, 0.75), 
+		inset 0px 7px 0px 0px var(--basic-red),
+		inset 0px -112px 0px 0px #F4F4F4;
+}
+
+.close-button {
+	position: absolute;
+	top: 21px;
+	right: 11px;
+	width: 21px;
+	height: 21px;
+	border: none;
+	background-color: transparent;
+	background-image: url('../img/icons/icon-close.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.close-button:hover {
+	cursor: pointer;
+}
+/* === / Pop Up Form === */
