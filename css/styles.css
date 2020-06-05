@@ -15,6 +15,7 @@
 	--military-green: #518534;
 
 	--basic-greylight: #c5c5c5;
+	--shadow-white: #F4F4F4;
 	--border-white: #EAEAEA;
 	--white: #ffffff;
 	--cream-white: #f3f7f9;
@@ -103,7 +104,7 @@ img {
 /* === Modal Windows === */
 
 .added-to-cart,
-.contact-form,
+.contact-form-window,
 .big-map {
 	display: none;
 }
@@ -534,9 +535,103 @@ img {
 	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 4;
+	position: relative;
+	box-sizing: border-box;
+	padding-top: 23px;
+	padding-left: 24px;
+	background-repeat: no-repeat;
+
 }
 
+.slider-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
 
+.slider-heading {
+	font-size: 36px;
+	line-height: 36px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+.slider-desc {
+	font-size: 18px;
+	line-height: 24px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+
+.slider-1 {
+	background-image: url('../img/design/slide-perforators.jpg');
+}
+
+.slider-2 {
+	background-image: url('../img/design/slide-drills.jpg');
+}
+
+.slide {
+	display: none;
+}
+
+.slide-current {
+	display: block;
+}
+
+.slider-controls {
+	position: absolute;
+	top: 123px;
+	left: 24px;
+	width: 576px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider-bullets {
+	position: absolute;
+	top: 220px;
+	left: 295px;
+	width: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider-switch {
+	padding: 0;
+	box-sizing: border-box;
+	width: 10px;
+	height: 10px;
+	background-color: var(--white);
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.switch-active {
+	background-color: var(--basic-red);
+}
+
+.slider-button {
+	width: 192px;
+	margin-top: 113px;
+}
+
+.left-control,
+.right-control {
+	width: 22px;
+	height: 40px;
+	background-color: transparent;
+	border: 0;
+	background-image: url('../img/icons/icon-right.svg');
+	background-size: cover;
+	cursor: pointer;
+}
+
+.left-control {
+	transform: rotate(180deg);
+}
 
 /* === / Benefits === */
 
@@ -932,10 +1027,33 @@ img {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-top: 17px;
 }
 
 .bread-crumbs-item {
-	margin-right: 10px;
+	position: relative;
+	margin-right: 41px;
+}
+
+.bread-crumbs-item:first-child .bread-crumbs-link {
+	display: inline-block;
+	width: 14px;
+	height: 12px;
+	background-image: url('../img/icons/icon-home.svg');
+	block-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 6px;
+}
+
+.bread-crumbs-item:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	right: -25px;
+	top: 7px;
+	width: 8px;
+	height: 12px;
+	background-image: url('../img/icons/icon-right-small.svg');
+	
 }
 
 .bread-crumbs-link {
@@ -957,6 +1075,7 @@ img {
 	padding-left: 30px;
 	padding-top: 30px;
 	padding-bottom: 30px;
+	margin-top: 17px;
 }
 
 .catalog-wrapper {
@@ -1229,19 +1348,27 @@ img {
 /* / === Catalog Inner === */
 
 
-/* === Pop Up Form === */
+/* === POP UP ELEMENTS === */
 
-.contact-form {
-	display: block;
+.popup {
 	position: fixed;
-	box-sizing: border-box;
-	width: 620px;
-	min-height: 430px;
-	background-color: var(--white);
 	box-shadow: 
 		0px 20px 40px rgba(0, 0, 0, 0.75), 
 		inset 0px 7px 0px 0px var(--basic-red),
-		inset 0px -112px 0px 0px #F4F4F4;
+		inset 0px -112px 0px 0px var(--shadow-white);
+	z-index: 100;
+	box-sizing: border-box;
+	background-color: var(--white);
+}
+
+/* === Pop Up Form === */
+
+.contact-form-window {
+	width: 620px;
+	min-height: 430px;
+	padding-left: 80px;
+	padding-right: 80px;
+
 }
 
 .close-button {
@@ -1260,4 +1387,118 @@ img {
 .close-button:hover {
 	cursor: pointer;
 }
+
+.form-input {
+	box-sizing: border-box;
+	min-height: 38px;
+	border-radius: 2px;
+	border: 2px solid var(--basic-greylight);
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 13px;
+	padding-left: 12px;
+	background-color: transparent;
+	width: 220px;
+	margin-top: 11px;
+	
+}
+
+.contact-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 46px;
+}
+
+.form-field {
+	box-sizing: border-box;
+	width: 220px;
+	margin: 0;
+}
+.form-question {
+	width: 100%;
+	margin-top: 13px;
+}
+
+.form-question .form-input{
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 114px;
+	resize: none;
+	padding-top: 9px;
+	padding-left: 10px;
+}
+
+.form-submit {
+	border: none;
+	width: 100%;
+	margin-top: 67px;
+	margin-right: 0;
+}
+
 /* === / Pop Up Form === */
+
+/* === Big Map === */
+
+.big-map {
+	position: fixed;
+	width: 943px;
+	height: 443px;
+	z-index: 100;
+}
+
+.big-map::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 7px;
+	background-color: var(--basic-red);
+	top: 0;
+	z-index: 25;
+}
+
+/* / === Big Map === */
+
+
+
+/* === Cart Pop-Up === */
+
+.added-to-cart {
+	width: 620px;
+	min-height: 283px;
+	background-image: url('../img/icons/icon-mark.svg');
+	background-repeat: no-repeat;
+	background-size: 66px 66px;
+	background-position: 81px 55px;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+	padding-top: 74px;
+	text-align: center;
+}
+
+.added-to-cart .close-button {
+	top: 19px;
+}
+
+.cart-actions {
+	box-sizing: border-box;
+	margin-top: 104px;
+	margin-left: 114px;
+	margin-right: auto;
+	width: 394px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.cart-actions .group-button {
+	width: 192px;
+	margin: 0;
+}
+
+.resume-shopping {
+	border: none;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+/* === / Cart Pop-Up === */

@@ -59,7 +59,28 @@
                     <li class="benefit-item benefit-technic">Техника<a href="#" class="benefit-button">Для стройки</a></li>
                     <li class="benefit-item benefit-sale">Скидки 50%<a href="#" class="benefit-button">На 350 товаров</a></li>
                     <li class="benefit-item benefit-delivery">Доставка<a href="#" class="benefit-button">Бесплатно</a></li>
-                    <li class="benefit-item slider"><a href="#" class="benefit-slider">Слайдер</a></li>
+                    <li class="benefit-item slider slider-2">
+                        <ul class="slider-list">
+                            <li class="slide slide-perforators">
+                                <h3 class="slider-heading">Перфораторы</h3>
+                                <p class="slider-desc">Настоящие мужские игрушки</p>
+                                <a href="inner.html" class="group-button slider-button">Открыть каталог</a>
+                            </li>
+                            <li class="slide slide-drills slide-current">
+                                <h3 class="slider-heading">Дрели</h3>
+                                <p class="slider-desc">Соседям на радость!</p>
+                                <a href="inner.html" class="group-button slider-button">Открыть каталог</a>
+                            </li>
+                        </ul>
+                        <div class="slider-controls">
+                            <button class="left-control" type="button" aria-label="левый слайд"></button>
+                            <button class="right-control" type="button" aria-label="правый слайд"></button>
+                        </div>
+                        <div class="slider-bullets">
+                            <button type="button" aria-label="первый слайд" class="slider-switch switch-active"></button>
+                            <button type="button" aria-label="второй слайд" class="slider-switch"></button>
+                        </div>
+                    </li>
                 </ul>
             </section>
             <section class="popular-goods container">
@@ -325,36 +346,41 @@
         </footer>
 
         <!-- Всплывающая форма -->
-        <div class="contact-form" id="contact-form">
-            <button class="close-button" type="button"></button>
-            <form action="https://echo.htmlacademy.ru" method="POST">
-                <p>
-                    <label for="form-name">Ваше имя:</label>
-                    <input type="text" placeholder="Имя Фамилия" name="name" id="form-name">
-                </p>
-                <p>
-                    <label for="form-email">Ваш e-mail:</label>
-                    <input type="email" placeholder="email@example.com" name="email" id="form-email">
-                </p>
-                <p>
-                    <label for="form-question">Текст письма:</label>
-                    <input type="text" placeholder="В свободной форме" name="question" id="form-question">
-                </p>
-                <button type="submit">Отправить</button>
-            </form>
         
-            <!-- Всплывающая карта -->
-            <div class="big-map">
-                <img src="img/design/map-popup.png" alt="Карта офиса по адресу улица Большая Конюшенная, 19">
-            </div>
-
-            <!-- Модальное окно -->
-            <div class="added-to-cart">
-                <span>Товар добавлен в корзину!</span>
-                <a href="#">Оформить заказ</a>
-                <button>Продолжить покупки</button>
-            </div>
-
+        <div class="contact-form-window popup" id="contact-form">
+            <button class="close-button" type="button"></button>
+            <form class="contact-form" action="https://echo.htmlacademy.ru" method="POST">
+                <p class="form-name form-field">
+                    <label for="form-name">Ваше имя:</label>
+                    <input class="form-input" type="text" placeholder="Имя Фамилия" name="name" id="form-name">
+                </p>
+                <p class="form-email form-field">
+                    <label for="form-email">Ваш e-mail:</label>
+                    <input class="form-input" type="email" placeholder="email@example.com" name="email" id="form-email">
+                </p>
+                <p class="form-question form-field">
+                    <label for="form-question">Текст письма:</label>
+                    <textarea class="form-input" placeholder="В свободной форме" name="question" id="form-question"></textarea>
+                </p>
+                <button class="form-submit group-button" type="submit">Отправить</button>
+            </form>
         </div>
+        
+        <!-- Всплывающая карта -->
+        <div class="big-map">
+            <button class="close-button" type="button"></button>
+            <img src="img/design/map-popup.png" alt="Карта офиса по адресу улица Большая Конюшенная, 19" width="970" height="477">
+        </div>
+
+        <!-- Модальное окно -->
+        <div class="added-to-cart popup">
+            <button class="close-button" type="button"></button>
+            <span>Товар добавлен в корзину!</span>
+            <div class="cart-actions">
+                <a href="#" class="group-button">Оформить заказ</a>
+                <button class="group-button resume-shopping" type="button">Продолжить покупки</button>
+            </div>
+        </div>
+  
     </body>
 </html>
