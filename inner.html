@@ -21,7 +21,7 @@
                 </form>
                 <div class="header-top-links">
                   <a href="#" class="header-bookmarks header-top-link">Закладки: 0</a>
-                  <a href="#" class="header-cart header-top-link">Корзина: 0</a>
+                  <a href="#" class="header-cart header-top-link cart-active">Корзина: 10</a>
                   <a href="#" class="header-order header-top-link">Оформить заказ</a>
                 </div>
               </div>
@@ -32,9 +32,15 @@
                 <a href="tel:+78125550555" class="header-phone">+7 (812) 555-05-55</a>
                 <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
               </div>
-              <div class="header-log-buttons">
-                <a href="#" class="header-enter">Войти</a>
-                <a href="#" class="header-registration">Регистрация</a>
+              <div class="profile-actions">
+                <div class="profile-wrapper">
+                    <a href="#" class="profile">Равшан Джамшутович</a>
+                    <button type="button" class="log-out-button"><span class="visually-hidden">Выйти из аккаунта</span></button>
+                </div>
+                <ul class="account-actions">
+                    <li class="account-action"><a href="#" class="account-action-link">Мои заказы</a></li>
+                    <li class="account-action"><a href="#" class="account-action-link">Личный кабинет</a></li>
+                </ul>
               </div>
             </div>
             <div class="header-bottom container">
@@ -341,12 +347,15 @@
             </div>
         </footer>
       
-      <!-- Модальное окно -->
-      <div class="added-to-cart">
-          <span>Товар добавлен в корзину!</span>
-          <a href="#">Оформить заказ</a>
-          <button>Продолжить покупки</button>
-      </div>
+        <!-- Модальное окно -->
+        <div class="added-to-cart popup">
+            <button class="close-button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
+            <span>Товар добавлен в корзину!</span>
+            <div class="cart-actions">
+                <a href="#" class="group-button">Оформить заказ</a>
+                <button class="group-button resume-shopping" type="button">Продолжить покупки</button>
+            </div>
+        </div>
 
     </body>
 </html>

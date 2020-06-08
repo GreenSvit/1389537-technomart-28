@@ -229,6 +229,10 @@ img {
 	padding-left: 49px;
 }
 
+.cart-active {
+	background-color: var(--basic-red);
+}
+
 .header-order {
 	background-color: var(--basic-green);
 	text-align: center;
@@ -269,6 +273,10 @@ img {
 .header-bookmarks:active,
 .header-cart:active {
 	background-color: var(--dark-navy-deeper);
+}
+
+.cart-active:active {
+	background-color: var(--special-red);
 }
 
 .header-bookmarks:active::before,
@@ -1016,6 +1024,76 @@ img {
 /* === / Footer === */
 
 /* === INNER (CATALOG) PAGE === */
+
+.profile-actions {
+	box-sizing: border-box;
+	width: 299px;
+	min-height: 77px;
+	margin-top: 3px;
+}
+
+.profile-wrapper {
+	box-sizing: border-box;
+	width: 100%;
+	background-color: var(--white);
+	min-height: 45px;
+	padding-left: 57px;
+	padding-top: 12px;
+}
+
+.profile {
+	position: relative;
+	text-decoration: none;
+	color: var(--black);
+	font-size: 21px;
+	line-height: 21px;
+}
+
+.profile::before {
+	position: absolute;
+	content: '';
+	width: 20px;
+	height: 18px;
+	background-image: url('../img/icons/icon-user.svg');
+	background-repeat: no-repeat;
+	top: 3px;
+	left: -42px;
+}
+
+.log-out-button {
+	border: none;
+	background-color: transparent;
+	width: 20px;
+	height: 17px;
+	background-image: url('../img/icons/icon-logout.svg');
+	background-repeat: no-repeat;
+	margin-left: 15px;
+}
+
+.account-actions {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 7px;
+}
+
+.account-action:first-child {
+	list-style-type: none;
+	margin-right: 30px;
+}
+
+.account-action {
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.account-action-link {
+	text-decoration: none;
+	color: var(--basic-navy);
+}
 
 .bread-crumbs {
 	display: flex;
