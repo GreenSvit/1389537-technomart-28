@@ -36,7 +36,12 @@
 	--dark-navy-deeper: #161d29;
 	--navy-black: #212a3a;
 	--shadow-lightgrey: rgba(255, 255, 255, 0.5);
+	--lightshadow-lightgrey: rgba(255, 255, 255, 0.3);
+	--dark-grey-transparent: rgba(169, 169, 169, 0.3);
+	--brown-grey-transparent: rgba(197, 197, 197, 0.3);
+	--black-transparent: rgba(0, 0, 0, 0.3);
 	--shadow-grey: rgba(0, 0, 0, 0.15);
+	
 	--black: #000000;
 }
 
@@ -469,7 +474,7 @@ img {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: var(--white);
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: var(--lightshadow-lightgrey);
 	margin-top: 14px;
 	font-size: 14px;
 	line-height: 18px;
@@ -480,11 +485,11 @@ img {
 }
 
 .benefit-button:hover {
-	background-color: rgba(197, 197, 197, 0.3);
+	background-color: var(--brown-grey-transparent);
 }
 
 .benefit-button:active {
-	background-color: rgba(169, 169, 169, 0.3);
+	background-color: var(--dark-grey-transparent);
 }
 
 .benefit-materials {
@@ -1028,10 +1033,11 @@ img {
 
 .bread-crumbs-item:first-child .bread-crumbs-link {
 	display: inline-block;
+	vertical-align: baseline;
 	width: 14px;
 	height: 12px;
 	background-image: url('../img/icons/icon-home.svg');
-	block-size: cover;
+	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top: 6px;
 }
@@ -1142,7 +1148,7 @@ img {
 
 .sort-type-link {
 	text-decoration: none;
-	color: rgba(0, 0, 0, 0.3);
+	color: var(--black-transparent);
 }
 
 .catalog-list {
@@ -1246,7 +1252,7 @@ img {
 }
 
 .catalog-item:hover {
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 4px 20px var(--shadow-grey);
 }
 
 .to-buy-button,
@@ -1336,7 +1342,7 @@ img {
 
 .popup {
 	position: fixed;
-	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.75), inset 0px 7px 0px 0px var(--basic-red),
+	box-shadow: 0px 20px 40px var(--shadow-grey), inset 0px 7px 0px 0px var(--basic-red),
 		inset 0px -112px 0px 0px var(--shadow-white);
 	z-index: 100;
 	box-sizing: border-box;
