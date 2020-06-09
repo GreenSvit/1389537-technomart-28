@@ -11,6 +11,7 @@
 	--basic-green: #63a63e;
 	--special-green: #8ed78f;
 	--light-green: #5fbb2d;
+	--scale-green: #3ed492;
 	--dark-green: #367315;
 	--military-green: #518534;
 
@@ -24,12 +25,15 @@
 	--light-grey: #f3f7f8;
 	--special-grey: #e5e5e5;
 	--special-biege: #f9f5f0;
+	--grey-toggle: #ababab;
 	--grey: #a9a9a9;
+	--scale-grey: #d7dcde;
 	--blue-grey: #f1f5f7;
 
 	--special-pink: #dc91d8;
 
 	--special-blue: #3bbce3;
+	--fill-navy: #3D546F;
 	--basic-navy: #32425c;
 	--dark-navy: #293449;
 	--deep-navy: #1d2739;
@@ -775,6 +779,7 @@ img {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-top: 70px;
+	margin-bottom: 70px;
 }
 
 .company-desc {
@@ -867,7 +872,6 @@ img {
 .footer {
 	background-color: var(--basic-navy);
 	color: var(--white);
-	margin-top: 70px;
 }
 
 .footer-top,
@@ -1049,25 +1053,51 @@ img {
 	line-height: 21px;
 }
 
-.profile::before {
+
+.account-action-link:hover,
+.account-action:hover {
+	color: var(--basic-red);
+}
+
+.profile:active,
+.account-action-link:active,
+.account-action:active {
+	color: var(--basic-greylight);
+}
+
+.profile-icon {
 	position: absolute;
-	content: '';
 	width: 20px;
 	height: 18px;
-	background-image: url('../img/icons/icon-user.svg');
-	background-repeat: no-repeat;
 	top: 3px;
 	left: -42px;
 }
 
 .log-out-button {
+	position: relative;
 	border: none;
 	background-color: transparent;
 	width: 20px;
 	height: 17px;
-	background-image: url('../img/icons/icon-logout.svg');
-	background-repeat: no-repeat;
+	background-color: transparent;
 	margin-left: 15px;
+	cursor: pointer;
+}
+
+.logout-icon {
+	position: absolute;
+	top: 1px;
+	left: -1px;
+}
+
+.logout-icon:hover path,
+.profile:hover .profile-icon path {
+	fill: var(--fill-navy);
+}
+
+.logout-icon:active path,
+.profile:active .profile-icon path {
+	fill: var(--basic-greylight);
 }
 
 .account-actions {
@@ -1167,6 +1197,10 @@ img {
 }
 
 .filter-heading {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 18px;
+	margin: 0;
 	font-size: 13px;
 	line-height: 18px;
 	display: block;
@@ -1196,9 +1230,94 @@ img {
 	border: solid 1px var(--special-grey);
 }
 
+/* === Price Filter === */
+
+.price-filter-field {
+	margin: 0;
+	margin-top: 14px;
+	padding: 0;
+	border: none;
+}
+
+.price-filter {
+	width: 220px;
+	margin-top: 11px;
+}
+
+.price-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.range-controls {
+	position: relative;
+	height: 41px;
+	background-color: var(--basic-cream);
+	border-radius: 2px;
+	margin-bottom: 9px;
+	padding-top: 39px;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.range-controls .scale {
+	height: 2px;
+	background-color: var(--scale-grey);
+}
+
+.range-controls .bar {
+	height: 2px;
+	background-color: var(--scale-green);
+	width: 70%;
+}
+
+.range-controls .toggle {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 4px;
+	height: 4px;
+	padding: 0;
+	border: 8px solid var(--white);
+	background-color: var(--grey-toggle);
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 var(--grey-toggle);
+	cursor: pointer;
+  }
+
+.range-controls .toggle-min {
+	left: 18px;
+}
+
+.range-controls .toggle-max {
+	left: 140px;
+}
+
+.price-input {
+	box-sizing: border-box;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 17px;
+	line-height: 18px;
+	width: 95px;
+	padding: 10px;
+	text-align: center;
+	background-color: var(--basic-cream);
+	border: none;
+	border-radius: 2px;
+}
+
+
+/* === / Price Filter === */
+
 /* === / Filter === */
 
 /* === Catalog Inner === */
+
+/* === Sorting === */
 
 .sort {
 	display: flex;
@@ -1208,12 +1327,17 @@ img {
 	line-height: 18px;
 	background-color: var(--basic-cream);
 	text-transform: uppercase;
+	min-height: 38px;
+	align-items: center;
 }
 
 .sort-heading {
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: normal;
+	padding: 0;
+	margin: 0;
+	margin-left: 19px;
 }
 
 .sort-types {
@@ -1222,17 +1346,62 @@ img {
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
+	margin-left: 140px;
 }
 
 .sort-type-link {
 	text-decoration: none;
 	color: var(--black-transparent);
+	border-bottom: dotted 1px var(--basic-red);
 }
+
+.sort-type-link:not(.sorted-by):hover {
+	color: var(--black);
+	border-bottom-style: solid;
+}
+
+.sorted-by {
+	color: var(--basic-red);
+	border: none;
+}
+
+
+.sorted-by-icon path{
+	fill: var(--basic-red);
+}
+
+.sort-type:nth-child(2) {
+	margin-left: 70px;
+}
+
+.sort-type:nth-child(3) {
+	margin-left: 65px;
+}
+
+.sort-icons {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 46px;
+}
+
+.sort-icon-item:last-child {
+	margin-left: 21px;
+}
+
+.sort-icon:not(.sorted-by-icon):hover path {
+	fill: var(--black);
+}
+
+/* === / Sorting === */
 
 .catalog-list {
 	padding: 0;
 	list-style: none;
 	margin: 0;
+	margin-top: 28px;
 	display: grid;
 	grid-gap: 18px 20px;
 	grid-template-columns: auto auto auto;
@@ -1376,10 +1545,16 @@ img {
 
 /* === / Catalog Card === */
 
+/* === Pagination === */
+
 .catalog-pagination {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 48px;
+	box-sizing: border-box;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	width: 284px;
 	min-height: 38px;
 }
@@ -1387,19 +1562,45 @@ img {
 .page-link {
 	text-decoration: none;
 	text-transform: uppercase;
+	padding: 10px 15px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
-	line-height: 38px;
+	line-height: 18px;
 	color: var(--black);
 	border: 1px solid var(--special-grey);
 	border-radius: 2px;
 	box-sizing: border-box;
 }
 
+.page-link:not(.current-page):hover {
+	border-color: var(--basic-greylight);
+}
+
+.page-link:not(.current-page):active {
+	border-color: var(--basic-red);
+}
+
+.pagination-item:not(:first-child) {
+	margin-left: 10px;
+}
+
+.current-page {
+	color: var(--white);
+	background-color: var(--basic-red);
+	border-color: var(--basic-red);
+}
+
+/* === / Pagination === */
+
 .about-perforators {
 	background-color: var(--blue-grey);
+	padding-top: 64px;
+	padding-bottom: 68px;
 }
 
 .about-perforators-heading {
+	padding: 0;
+	margin: 0;
 	font-size: 30px;
 	line-height: 30px;
 	color: var(--black);
@@ -1408,6 +1609,10 @@ img {
 }
 
 .about-perforators-desc {
+	padding: 0;
+	margin: 0;
+	margin-top: 25px;
+	width: 907px;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
