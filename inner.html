@@ -85,11 +85,10 @@
                                     <div class="range-controls">
                                         <div class="scale">
                                             <div class="bar" style="
-                                            width: 30%;
-                                            margin-left: 20%
+                                            width: 50%;
                                             "></div>
                                         </div>
-                                        <div class="toggle toggle-min" style="left: 20%" tabindex="0"></div>
+                                        <div class="toggle toggle-min" style="left: 5%" tabindex="0"></div>
                                         <div class="toggle toggle-max" style="left: 50%" tabindex="0"></div>                            
                                     </div>
                                     <div class="price-controls">
@@ -102,37 +101,44 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            <fieldset>
+                            <fieldset class="manufacturers-filter-field">
                                 <legend class="filter-legend">Производитель</legend>
-                                <p>
-                                    <input type="checkbox" id ="bosch" name="maker" value="bosch">
+                                <p class="filter-item">
+                                    <input class="visually-hidden manufacturer-input" type="checkbox" id ="bosch" name="maker" value="bosch">
+                                    <span class="manufacturer-checkbox"></span>
                                     <label for="bosch" class="filter-label"> Bosch </label>
                                 </p>
-                                <p>
-                                    <input type="checkbox" id ="interscol" name="maker" value="interscol">
+                                <p class="filter-item">
+                                    <input class="visually-hidden manufacturer-input" type="checkbox" id ="interscol" name="maker" value="interscol">
+                                    <span class="manufacturer-checkbox"></span>
                                     <label for="interscol" class="filter-label"> Интерскол </label>
                                 </p>
-                                <p>
-                                    <input type="checkbox" id ="makita" name="maker" value="makita">
+                                <p class="filter-item">
+                                    <input class="visually-hidden manufacturer-input" type="checkbox" id ="makita" name="maker" value="makita">
+                                    <span class="manufacturer-checkbox"></span>
                                     <label for="makita" class="filter-label"> Makita </label>
                                 </p>
-                                <p>
-                                    <input type="checkbox" id ="dewalt" name="maker" value="dewalt">
+                                <p class="filter-item">
+                                    <input class="visually-hidden manufacturer-input" type="checkbox" id ="dewalt" name="maker" value="dewalt">
+                                    <span class="manufacturer-checkbox"></span>
                                     <label for="dewalt" class="filter-label">DeWalt</label>
                                 </p>
-                                <p>
-                                    <input type="checkbox" id ="hitachi" name="maker" value="hitachi">
+                                <p class="filter-item">
+                                    <input class="visually-hidden manufacturer-input" type="checkbox" id ="hitachi" name="maker" value="hitachi">
+                                    <span class="manufacturer-checkbox"></span>
                                     <label for="hitachi" class="filter-label"> Hitachi </label>
                                 </p>
                             </fieldset>
-                            <fieldset>
+                            <fieldset class="power-filter-field">
                                 <legend class="filter-legend">Питание</legend>
-                                <p>
-                                    <input type="radio" name="power" id="battery" value="battery">
+                                <p class="filter-item">
+                                    <input class="visually-hidden power-input" type="radio" name="power" id="battery" value="battery">
+                                    <span class="power-checkbox"></span>
                                     <label for="battery" class="filter-label"> Аккумуляторные </label>  
                                 </p>
-                                <p>
-                                    <input type="radio" name="power" id="network" value="network">
+                                <p class="filter-item">
+                                    <input class="visually-hidden power-input" type="radio" name="power" id="network" value="network">
+                                    <span class="power-checkbox"></span>
                                     <label for="network" class="filter-label"> Сетевые </label>
                                 </p>
                             </fieldset>
