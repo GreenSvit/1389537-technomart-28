@@ -120,6 +120,28 @@ img {
 	display: none;
 }
 
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.modal-show {
+	display: block;
+	animation: zoom 0.4s;
+}
+
+.modal-close {
+	animation: zoom-out 0.4s;
+}
+
+.modal-error {
+	animation: shake 0.6s;
+}
+
 /* === / Modal Windows === */
 
 /* === Header === */
@@ -1726,7 +1748,6 @@ img {
 .current-price {
 	box-sizing: border-box;
 	display: block;
-	vertical-align: middle;
 	font-size: 17px;
 	line-height: 18px;
 	font-weight: bold;
@@ -1899,7 +1920,6 @@ img {
 /* === POP UP ELEMENTS === */
 
 .popup {
-	position: fixed;
 	box-shadow: 0px 20px 40px var(--shadow-grey), inset 0px 7px 0px 0px var(--basic-red),
 		inset 0px -112px 0px 0px var(--shadow-white);
 	z-index: 100;
@@ -1910,6 +1930,9 @@ img {
 /* === Pop Up Form === */
 
 .contact-form-window {
+	bottom: auto;
+	top: 50%;
+	margin-top: -230px;
 	width: 620px;
 	min-height: 430px;
 	padding-left: 80px;
@@ -1984,7 +2007,8 @@ img {
 /* === Big Map === */
 
 .big-map {
-	position: fixed;
+	top: 50%;
+	margin-top: -222px;
 	width: 943px;
 	height: 443px;
 	z-index: 100;
@@ -2000,11 +2024,20 @@ img {
 	z-index: 25;
 }
 
+.image-map {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+}
+
 /* / === Big Map === */
 
 /* === Cart Pop-Up === */
 
 .added-to-cart {
+	bottom: auto;
+	top: 50%;
+	margin-top: -142px;
 	width: 620px;
 	min-height: 283px;
 	background-image: url('../img/icons/icon-mark.svg');
@@ -2016,6 +2049,7 @@ img {
 	font-weight: bold;
 	padding-top: 74px;
 	text-align: center;
+	z-index: 100;
 }
 
 .added-to-cart .close-button {
@@ -2044,3 +2078,49 @@ img {
 }
 
 /* === / Cart Pop-Up === */
+
+/* === Animations === */
+
+@keyframes zoom {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes zoom-out {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0);
+	}
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translateX(10px);
+	}
+}
+
+/* === / Animations === */
