@@ -1,9 +1,15 @@
 var contactButton = document.querySelector('.contacts-form-button');
 var contactPopup = document.querySelector('.contact-form-window');
-var closeButton = document.querySelector('.close-button');
+var closeButtons = document.querySelectorAll('.close-button');
 var nameInput = contactPopup.querySelector('.name-input');
 var contactForm = contactPopup.querySelector('.contact-form');
 var emailInput = contactPopup.querySelector('.email-input');
+var modals = document.querySelectorAll('.modal');
+var contactsMap = document.querySelector('.contacts-map');
+var bigMap = document.querySelector('.big-map');
+var toBuyButtons = document.querySelectorAll('.to-buy-button');
+var addedToCart = document.querySelector('.added-to-cart');
+var resumeButton = addedToCart.querySelector('.resume-shopping');
 
 var isStorageSupport = true;
 var storage = '';
@@ -27,13 +33,38 @@ contactButton.addEventListener('click', function(evt) {
 	}
 });
 
-closeButton.addEventListener('click', function(evt) {
+contactsMap.addEventListener('click', function(evt) {
 	evt.preventDefault();
-	contactPopup.classList.add('modal-close');
+	bigMap.classList.remove('modal-close');
+	bigMap.classList.add('modal-show');
+});
+
+for (let i = 0; i < toBuyButtons.length; i++) {
+	toBuyButtons[i].addEventListener('click', function(evt) {
+		evt.preventDefault();
+		addedToCart.classList.remove('modal-close');
+		addedToCart.classList.add('modal-show');
+	});
+}
+
+for (let i = 0; i < closeButtons.length; i++) {
+	closeButtons[i].addEventListener('click', function(evt) {
+		evt.preventDefault();
+		modals[i].classList.add('modal-close');
+		setTimeout(() => {
+			modals[i].classList.remove('modal-show');
+		}, 390);
+		modals[i].classList.remove('modal-error');
+	});
+}
+
+resumeButton.addEventListener('click', function(evt) {
+	evt.preventDefault();
+	addedToCart.classList.add('modal-close');
 	setTimeout(() => {
-		contactPopup.classList.remove('modal-show');
+		addedToCart.classList.remove('modal-show');
 	}, 390);
-	contactPopup.classList.remove('modal-error');
+	addedToCart.classList.remove('modal-error');
 });
 
 contactForm.addEventListener('submit', function(evt) {
