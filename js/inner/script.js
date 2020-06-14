@@ -22,3 +22,16 @@ for (let i = 0; i < closeToggles.length; i++) {
 		addedToCart.classList.remove('modal-error');
 	});
 }
+
+window.addEventListener('keydown', function(evt) {
+	if (evt.keyCode === 27) {
+		if (addedToCart.classList.contains('modal-show')) {
+			evt.preventDefault();
+			addedToCart.classList.add('modal-close');
+			setTimeout(() => {
+				addedToCart.classList.remove('modal-show');
+			}, 390);
+			addedToCart.classList.remove('modal-error');
+		}
+	}
+});

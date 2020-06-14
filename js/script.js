@@ -11,13 +11,21 @@ var toBuyButtons = document.querySelectorAll('.to-buy-button');
 var addedToCart = document.querySelector('.added-to-cart');
 var resumeButton = addedToCart.querySelector('.resume-shopping');
 
-var isStorageSupport = true;
-var storage = '';
+var isNameExists = true;
+var isEmailExists = true;
+var name = '';
+var email = '';
 
 try {
-	storage = localStorage.getItem('name');
+	name = localStorage.getItem('name');
 } catch (err) {
-	isStorageSupport = false;
+	isNameExists = false;
+}
+
+try {
+	email = localStorage.getItem('email');
+} catch (err) {
+	isEmailExists = false;
 }
 
 contactButton.addEventListener('click', function(evt) {
@@ -25,9 +33,15 @@ contactButton.addEventListener('click', function(evt) {
 	contactPopup.classList.remove('modal-close');
 	contactPopup.classList.add('modal-show');
 
-	if (storage) {
-		nameInput.value = storage;
+	if (name && email) {
+		nameInput.value = name;
+		emailInput.value = email;
+	} else if (name) {
+		nameInput.value = name;
 		emailInput.focus();
+	} else if (email) {
+		emailInput.value = email;
+		nameInput.focus();
 	} else {
 		nameInput.focus();
 	}
@@ -74,21 +88,27 @@ contactForm.addEventListener('submit', function(evt) {
 		contactPopup.offsetWidth = contactPopup.offsetWidth;
 		contactPopup.classList.add('modal-error');
 	} else {
-		if (isStorageSupport) {
+		if (isNameExists) {
 			localStorage.setItem('name', nameInput.value);
+		}
+
+		if (isEmailExists) {
+			localStorage.setItem('email', emailInput.value);
 		}
 	}
 });
 
 window.addEventListener('keydown', function(evt) {
 	if (evt.keyCode === 27) {
-		if (contactPopup.classList.contains('modal-show')) {
-			evt.preventDefault();
-			contactPopup.classList.add('modal-close');
-			setTimeout(() => {
-				contactPopup.classList.remove('modal-show');
-			}, 390);
-			contactPopup.classList.remove('modal-error');
+		for (let i = 0; i < modals.length; i++) {
+			if (modals[i].classList.contains('modal-show')) {
+				evt.preventDefault();
+				modals[i].classList.add('modal-close');
+				setTimeout(() => {
+					modals[i].classList.remove('modal-show');
+				}, 390);
+				modals[i].classList.remove('modal-error');
+			}
 		}
 	}
 });
