@@ -1620,6 +1620,7 @@ img {
 	text-transform: uppercase;
 	min-height: 38px;
 	align-items: center;
+	width: 700px;
 }
 
 .sort-heading {
@@ -1629,6 +1630,7 @@ img {
 	padding: 0;
 	margin: 0;
 	margin-left: 19px;
+	max-width: 150px;
 }
 
 .sort-types {
@@ -1753,9 +1755,10 @@ img {
 	font-weight: bold;
 	background-image: url('../img/icons/red-button.svg');
 	background-repeat: no-repeat;
+	background-size: cover;
 	padding-top: 10px;
 	padding-right: 7px;
-	min-width: 141px;
+	width: 141px;
 	min-height: 38px;
 	color: var(--white);
 	margin-top: auto;
