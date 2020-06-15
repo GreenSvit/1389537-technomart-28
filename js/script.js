@@ -13,14 +13,15 @@ var resumeButton = addedToCart.querySelector('.resume-shopping');
 
 var isNameExists = true;
 var isEmailExists = true;
-var name = '';
+var userName = '';
 var email = '';
 
 try {
-	name = localStorage.getItem('name');
+	userName = localStorage.getItem('userName');
 } catch (err) {
 	isNameExists = false;
 }
+
 
 try {
 	email = localStorage.getItem('email');
@@ -28,22 +29,28 @@ try {
 	isEmailExists = false;
 }
 
+
+
 contactButton.addEventListener('click', function(evt) {
 	evt.preventDefault();
 	contactPopup.classList.remove('modal-close');
 	contactPopup.classList.add('modal-show');
 
-	if (name && email) {
-		nameInput.value = name;
+	if (userName && email) {
+		nameInput.value = userName;
 		emailInput.value = email;
-	} else if (name) {
-		nameInput.value = name;
-		emailInput.focus();
-	} else if (email) {
-		emailInput.value = email;
-		nameInput.focus();
 	} else {
-		nameInput.focus();
+		if (userName) {
+			nameInput.value = userName;
+			emailInput.focus();
+		}
+		if (email) {
+			emailInput.value = email;
+			nameInput.focus();
+		}
+		if (!email && !userName) {
+			nameInput.focus();
+		}
 	}
 });
 
@@ -89,7 +96,7 @@ contactForm.addEventListener('submit', function(evt) {
 		contactPopup.classList.add('modal-error');
 	} else {
 		if (isNameExists) {
-			localStorage.setItem('name', nameInput.value);
+			localStorage.setItem('userName', nameInput.value);
 		}
 
 		if (isEmailExists) {
