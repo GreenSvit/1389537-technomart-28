@@ -185,11 +185,11 @@ img {
 	left: 0;
 }
 
-.logo-technomart:active {
+.active-logo:active {
 	background-color: var(--special-red);
 }
 
-.logo-technomart:active::after {
+.active-logo.logo-technomart:active::after {
 	background-color: var(--red-darker);
 }
 
@@ -345,6 +345,7 @@ img {
 .header-phone {
 	position: relative;
 	margin: 0 auto;
+	margin-left: 4px;
 	display: block;
 	text-decoration: none;
 	min-width: 270px;
@@ -352,7 +353,7 @@ img {
 	box-sizing: border-box;
 	border: 3px solid var(--white);
 	padding-top: 7px;
-	padding-left: 73px;
+	padding-left: 71px;
 	color: var(--basic-red);
 	font-size: 21px;
 	font-weight: bold;
@@ -362,7 +363,7 @@ img {
 	content: '';
 	position: absolute;
 	top: 10px;
-	left: 38px;
+	left: 36px;
 	height: 19px;
 	width: 19px;
 	background: url('../img/icons/icon-phone.svg') no-repeat;
@@ -439,12 +440,14 @@ img {
 	margin-top: 40px;
 }
 
+
 .header-menu-list {
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
 	padding: 0;
+	width: 940px;
 }
 
 .header-menu-item {
@@ -460,9 +463,10 @@ img {
 	box-shadow: inset 0px -5px 0px var(--dark-navy);
 	min-height: 60px;
 	font-size: 18px;
-	padding-top: 19px;
+	padding-top: 17px;
 	box-sizing: border-box;
 }
+
 
 .header-menu-link:hover {
 	background-color: var(--dark-navy);
@@ -717,6 +721,10 @@ img {
 	margin-bottom: 2px;
 }
 
+.button-manufacturers {
+	margin-right: 19px;
+}
+
 .group-button:active {
 	background-color: var(--special-red);
 }
@@ -772,7 +780,7 @@ img {
 
 .services {
 	background-color: var(--blue-grey);
-	padding-top: 64px;
+	padding-top: 65px;
 }
 
 .services-desc {
@@ -948,7 +956,7 @@ img {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-top: 70px;
+	margin-top: 71px;
 	margin-bottom: 70px;
 }
 
@@ -1465,6 +1473,8 @@ img {
 }
 
 .range-controls .toggle {
+	box-sizing: content-box;
+	display: flex;
 	position: absolute;
 	top: 30px;
 	left: 0;
