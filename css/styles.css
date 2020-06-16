@@ -1956,7 +1956,7 @@ img {
 	padding: 0;
 	margin: 0;
 	margin-top: 25px;
-	width: 907px;
+	width: 915px;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 24px;
@@ -2061,6 +2061,7 @@ img {
 	width: 943px;
 	height: 443px;
 	z-index: 100;
+	box-shadow: 0px 20px 40px var(--shadow-grey);
 }
 
 .big-map::before {
