@@ -10,6 +10,24 @@ var bigMap = document.querySelector('.big-map');
 var toBuyButtons = document.querySelectorAll('.to-buy-button');
 var addedToCart = document.querySelector('.added-to-cart');
 var resumeButton = addedToCart.querySelector('.resume-shopping');
+var serviceControls = document.querySelectorAll('.service-control');
+var services = document.querySelectorAll('.service');
+
+
+for (let i = 0; i < serviceControls.length; i++) {
+	serviceControls[i].addEventListener('click', function(evt){
+		evt.preventDefault();
+		for (let j = 0; j < serviceControls.length; j++) {
+			if (j !== i && serviceControls[j].classList.contains('current-service-control')) {
+				serviceControls[j].classList.remove('current-service-control');
+				services[j].classList.remove('service-current');
+			}
+		}
+		serviceControls[i].classList.add('current-service-control');
+		services[i].classList.add('service-current');
+	})
+}
+
 
 var isNameExists = true;
 var isEmailExists = true;
