@@ -233,7 +233,7 @@ img {
 	margin-left: auto;
 	display: flex;
 	width: 450px;
-	justify-content: space-between;
+	justify-content: flex-end;
 }
 .header-top-link {
 	display: inline-block;
@@ -255,15 +255,20 @@ img {
 
 .header-cart {
 	padding-left: 49px;
+	flex-grow: 0;
 }
 
 .cart-active {
 	background-color: var(--basic-red);
+	width: 136px;
+	padding-left: 35px;
 }
 
 .header-order {
 	background-color: var(--basic-green);
 	text-align: center;
+	box-sizing: border-box;
+	flex-grow: 0;
 }
 
 .header-bookmarks::before,
@@ -287,6 +292,10 @@ img {
 	height: 15px;
 	width: 15px;
 	left: 26px;
+}
+
+.cart-active.header-cart::before {
+	left: 12px;
 }
 
 .header-bookmarks:hover::before,
@@ -340,6 +349,12 @@ img {
 .header-contacts {
 	margin-top: 3px;
 	padding-left: 17px;
+}
+
+.header-contacts-inner {
+	margin-top: 3px;
+	padding-left: 17px;
+	margin-left: 17px;
 }
 
 .header-phone {
@@ -438,6 +453,10 @@ img {
 
 .header-bottom {
 	margin-top: 40px;
+}
+
+.header-menu-inner {
+	margin-top: -5px;
 }
 
 
@@ -1353,7 +1372,7 @@ img {
 	text-transform: uppercase;
 	color: var(--basic-navy);
 	padding-left: 30px;
-	padding-top: 30px;
+	padding-top: 29px;
 	padding-bottom: 30px;
 	margin-top: 17px;
 }
@@ -1416,7 +1435,7 @@ img {
 	background-color: inherit;
 	border: solid 1px var(--special-grey);
 	cursor: pointer;
-	margin-top: 17px;
+	margin-top: 16px;
 }
 
 .filter-item {
@@ -1429,11 +1448,15 @@ img {
 
 .price-filter-field {
 	margin: 0;
-	margin-top: 14px;
+	margin-top: 13px;
 	padding: 0;
 	border: none;
 	padding-bottom: 25px;
 	border-bottom: solid 1px var(--special-grey);
+}
+
+.price-filter-field .filter-legend {
+	margin-bottom: 1px;
 }
 
 .price-filter {
@@ -1469,14 +1492,14 @@ img {
 .range-controls .bar {
 	height: 2px;
 	background-color: var(--scale-green);
-	width: 50%;
+	width: 80%;
 }
 
 .range-controls .toggle {
 	box-sizing: content-box;
 	display: flex;
 	position: absolute;
-	top: 30px;
+	top: 29px;
 	left: 0;
 	width: 4px;
 	height: 4px;
@@ -1489,11 +1512,11 @@ img {
 }
 
 .range-controls .toggle-min {
-	left: 5%;
+	left: 8%;
 }
 
 .range-controls .toggle-max {
-	left: 50%;
+	left: 72%;
 }
 
 .price-input {
@@ -1515,11 +1538,15 @@ img {
 
 .manufacturers-filter-field {
 	margin: 0;
-	margin-top: 16px;
+	margin-top: 15px;
 	padding: 0;
 	border: none;
-	padding-bottom: 26px;
+	padding-bottom: 8px;
 	border-bottom: solid 1px var(--special-grey);
+}
+
+.manufacturers-filter-field .filter-legend {
+	margin-bottom: 18px;
 }
 
 .manufacturer-checkbox {
@@ -1572,9 +1599,17 @@ img {
 
 .power-filter-field {
 	margin: 0;
-	margin-top: 18px;
+	margin-top: 17px;
 	padding: 0;
 	border: none;
+}
+
+.power-filter-field .filter-legend {
+	margin-bottom: 24px;
+}
+
+.power-filter-field .filter-item {
+	margin-bottom: 22px;
 }
 
 .power-checkbox {
@@ -1904,7 +1939,7 @@ img {
 .about-perforators {
 	background-color: var(--blue-grey);
 	padding-top: 64px;
-	padding-bottom: 68px;
+	padding-bottom: 70px;
 }
 
 .about-perforators-heading {
