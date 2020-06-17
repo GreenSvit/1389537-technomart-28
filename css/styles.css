@@ -462,7 +462,6 @@ img {
 	margin-top: -5px;
 }
 
-
 .header-menu-list {
 	margin: 0;
 	display: flex;
@@ -488,7 +487,6 @@ img {
 	padding-top: 17px;
 	box-sizing: border-box;
 }
-
 
 .header-menu-link:hover {
 	background-color: var(--dark-navy);
@@ -949,6 +947,10 @@ img {
 	text-decoration: none;
 	border-radius: 3px;
 	margin-top: 26px;
+}
+
+.credit-button:active {
+	background-color: var(--special-red);
 }
 
 .credit::after {
