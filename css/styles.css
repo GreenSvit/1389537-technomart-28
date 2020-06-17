@@ -7,6 +7,7 @@
 	--special-yellowlight: #ffd180;
 	--special-yellow: #ffbf47;
 	--special-yellow-dark: #ffc047;
+	--brick: #7c5549;
 
 	--basic-green: #63a63e;
 	--special-green: #8ed78f;
@@ -21,6 +22,7 @@
 	--white: #ffffff;
 	--cream-white: #f3f7f9;
 	--cream-white-2: #f2f6f8;
+	--white-box: #e9e9e9;
 	--basic-cream: #f7f3ec;
 	--light-grey: #f3f7f8;
 	--special-grey: #e5e5e5;
@@ -30,6 +32,7 @@
 	--grey: #a9a9a9;
 	--scale-grey: #d7dcde;
 	--blue-grey: #f1f5f7;
+	--sand: #d1c1ae;
 
 	--special-pink: #dc91d8;
 
@@ -603,6 +606,7 @@ img {
 	padding-top: 23px;
 	padding-left: 24px;
 	background-repeat: no-repeat;
+	background-color: var(--sand);
 }
 
 .slider-list {
@@ -627,10 +631,12 @@ img {
 }
 
 .slider-1 {
+	background-color: var(--sand);
 	background-image: url('../img/design/slide-perforators.jpg');
 }
 
 .slider-2 {
+	background-color: var(--brick);
 	background-image: url('../img/design/slide-drills.jpg');
 }
 
@@ -1580,17 +1586,16 @@ img {
 	border-color: var(--grey-box);
 }
 
-.manufacturer-input:checked:disabled ~ .checked-box path {
-	fill: var(--grey-box);
-}
-
 .filter-item:hover .manufacturer-input:not(:disabled) + .manufacturer-checkbox {
 	border-color: var(--grey-box);
 }
 
-.filter-item:hover .manufacturer-input:not(:disabled):checked ~ .checked-box path {
-	border-color: var(--grey-box);
+.filter-item:hover path {
 	fill: var(--grey-box);
+}
+
+.manufacturer-input:checked:disabled ~ .checked-box > path {
+	fill: var(--white-box);
 }
 
 /* === / Manufacturers === */
